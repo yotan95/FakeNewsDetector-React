@@ -51,11 +51,10 @@ export const deleteBoard = async (requestBoard) => {
 
 export const modifyBoard = async (requestBoard) => {
     const token = localStorage.getItem('token');
-    return await httpApi.put('/board'), {
+    return await httpApi.put(`/board/${requestBoard.id}`, requestBoard, {
         headers: {
             Authorization: token ? `Bearer ${token}` : '',
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
         },
-        data: requestBoard
-    }
+    });
 }

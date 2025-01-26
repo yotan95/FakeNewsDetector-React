@@ -15,3 +15,19 @@ export const getProfile = () => {
         }
     });
 }
+
+export const putPassword = (passwordData) => {
+    return httpApi.put('/password', passwordData, {
+        headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+    });
+}
+
+export const putProfile = (profileDate) => {
+    return httpApi.put('/profile', profileDate, {
+        headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+    });
+}

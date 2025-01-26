@@ -288,3 +288,56 @@
     width: 100%;
     flex: 0 0 auto;
 }
+
+.mp-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.mp-form-group label {
+    font-family: "Nanum Gothic", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    color: #332c5c;
+}
+
+.mp-form-group input {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: "Nanum Gothic", Helvetica;
+    font-size: 14px;
+}
+
+.mp-form-group input:focus {
+    outline: none;
+    border-color: #7562e0;
+}
+
+.form-group input::placeholder {
+    color: #cccccc;
+}
+
+.mp-form-group label {
+    font-family: "Nanum Gothic", Helvetica;
+    font-size: 14px;
+    color: #332c5c;
+}
+
+.mp-form-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.mp-form-label {
+    font-family: "Nanum Gothic", Helvetica;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.mp-name-inputs {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
