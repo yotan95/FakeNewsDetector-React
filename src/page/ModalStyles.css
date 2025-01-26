@@ -1,0 +1,96 @@
+/* 모달 오버레이 스타일 (배경) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 모달 본문 스타일 */
+.modal-content {
+    background: #fff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+/* 닫기(X) 버튼 스타일 */
+.modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-close-button:hover {
+    color: red;
+}
+
+/* 게시글 타이틀 스타일 */
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 입력 폼 스타일 */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 비밀번호 입력란 스타일 */
+.modal-input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.modal-input:focus {
+    border-color: #007bff;
+}
+
+/* 제출 버튼 스타일 */
+.modal-submit-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #8976fd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-submit-button:hover {
+    background-color: #7562e0;
+}
+
+/* 모달 열기 버튼 스타일 */
+.modal-open-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-open-button:hover {
+    background-color: #218838;
+}

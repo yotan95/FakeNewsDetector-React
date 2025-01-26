@@ -1,0 +1,441 @@
+.boardwr-div {
+    background-color: #f9f9f9;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+.boardwr-group {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    left: 330px;
+    top: 50px;
+    /* background-color: #ffffff; */
+}
+
+.boardwr-frame {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    height: fit-content;
+    align-items: flex-start;
+    gap: 42px;
+    padding: 50px;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.boardwr-frame-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.boardwr-text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "NanumBarunGothic-Bold", Helvetica;
+    font-weight: 700;
+    color: #8976fd;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.boardwr-group-2 {
+    position: relative;
+    width: 70px;
+    height: 35px;
+    margin-right: -2.00px;
+    /* 수평 정렬 */
+    display: flex;
+    align-items: center;
+
+}
+
+.boardwr-text-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: 14px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b53ff;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 34.6px;
+    white-space: nowrap;
+}
+
+.boardwr-vector {
+    /* position: absolute; */
+    width: 8px;
+    height: 14px;
+    top: 11px;
+    left: -1px;
+}
+
+.boardwr-frame-3 {
+    display: flex;
+    width: 982px;
+    align-items: center;
+    gap: 11px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.boardwr-group-3 {
+    position: relative;
+    width: 268px;
+    height: 81px;
+}
+
+.boardwr-overlap-group {
+    position: absolute;
+    width: 264px;
+    height: 50px;
+    top: 31px;
+    left: 0;
+}
+
+.boardwr-arrow-drop-down {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    left: 201px;
+}
+
+.boardwr-frame-wrapper {
+    position: absolute;
+    width: 264px;
+    height: 50px;
+    top: 0;
+    left: 0;
+}
+
+.boardwr-rectangle-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 264px;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+.boardwr-div-2 {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #828282;
+}
+
+.boardwr-text-wrapper-3 {
+    position: absolute;
+    width: 185px;
+    top: 13px;
+    left: 14px;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #00000078;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.boardwr-span-wrapper {
+    position: absolute;
+    width: 225px;
+    top: 0;
+    left: 14px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.3px;
+}
+
+.boardwr-span {
+    color: #000000;
+}
+
+.boardwr-frame-4 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+}
+
+.boardwr-text-wrapper-4 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.3px;
+}
+
+.boardwr-overlap-group-wrapper {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 50px;
+}
+
+.boardwr-text-wrapper-5 {
+    position: absolute;
+    width: 118px;
+    top: 14px;
+    left: 13px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.boardwr-frame-5 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 96px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.boardwr-p {
+    position: relative;
+    width: 211.27px;
+    margin-top: -1.00px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.3px;
+}
+
+.boardwr-text-wrapper-6 {
+    color: #6c6c6c;
+}
+
+.boardwr-rectangle {
+    align-self: stretch;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #828282;
+    /* padding-left: 10px; */
+    font-size: 16px;
+    font-family: "Poppins-Regular", Helvetica;
+}
+
+.boardwr-frame-6 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 209px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    position: relative;
+}
+
+.boardwr-span-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -17.00px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.3px;
+    white-space: nowrap;
+}
+
+.boardwr-rectangle-2 {
+    align-self: stretch;
+    width: 100%;
+    height: 149px;
+    margin-bottom: -16.00px;
+    border-radius: 14px;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #828282;
+    /* padding: 10px; */
+    font-size: 16px;
+    font-family: "Poppins-Regular", Helvetica;
+}
+
+.boardwr-frame-7 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: -44.00px;
+}
+
+.boardwr-frame-8 {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+}
+
+.boardwr-text-wrapper-7 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #6c6c6c;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 28.3px;
+}
+
+.boardwr-div-wrapper {
+    position: relative;
+    width: 264px;
+    height: 50px;
+}
+
+.boardwr-rectangle-3 {
+    width: 239px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #828282;
+    padding-left: 10px;
+    /* 글자 크기 키우기기 */
+    font-size: 24px;
+    font-family: "Poppins-Regular", Helvetica;
+}
+
+.boardwr-text-wrapper-8 {
+    position: relative;
+    align-self: stretch;
+    height: 28px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #6c6c6c;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 20.4px;
+}
+
+.boardwr-group-4 {
+    position: relative;
+    width: 134px;
+    height: 48px;
+    margin-right: -2.00px;
+}
+
+.boardwr-overlap-group-2 {
+    width: 132px;
+    height: 48px;
+    background-color: #8976fd;
+    position: relative;
+    border-radius: 10px;
+}
+
+.boardwr-text-wrapper-9 {
+    position: absolute;
+    top: 6px;
+    left: 45px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 34.6px;
+    white-space: nowrap;
+}
+
+.boardwr-group-wrapper {
+    position: absolute;
+    width: 244px;
+    height: 51px;
+    top: 68px;
+    left: 1532px;
+}
+
+.boardwr-group-5 {
+    position: relative;
+    width: 246px;
+    height: 51px;
+}
+
+.boardwr-login-signup {
+    position: absolute;
+    width: 132px;
+    height: 51px;
+    top: 0;
+    left: 112px;
+}
+
+.boardwr-frame-9 {
+    position: relative;
+    height: 51px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #8976fd;
+}
+
+.boardwr-text-wrapper-10 {
+    position: absolute;
+    width: 86px;
+    top: 11px;
+    left: 32px;
+    font-family: "NanumGothic-Bold", Helvetica;
+    font-weight: 700;
+    color: #7562e0;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 27px;
+}
+
+.boardwr-text-wrapper-11 {
+    position: absolute;
+    width: 101px;
+    top: 12px;
+    left: 0;
+    font-family: "NanumGothic-Bold", Helvetica;
+    font-weight: 700;
+    color: #7562e0;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 27px;
+    white-space: nowrap;
+}

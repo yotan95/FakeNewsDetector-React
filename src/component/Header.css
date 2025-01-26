@@ -1,0 +1,102 @@
+.icon {
+    width: 173px;
+    position: relative;
+    height: 57px;
+    object-fit: cover;
+}
+
+.b {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    line-height: 150%;
+    color: #7562e0
+}
+
+.b1 {
+    width: 120px;
+    position: absolute;
+    margin: 0 !important;
+    top: 12px;
+    left: 6px;
+    line-height: 150%;
+    display: inline-block;
+    z-index: 0;
+    color: #7562e0
+}
+
+.wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 15px;
+    border: 1px solid #8976fd;
+    box-sizing: border-box;
+    width: 132px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 32px;
+}
+
+.loginsignup {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    width: 132px;
+    height: 51px;
+}
+
+.b2 {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    line-height: 150%;
+    display: inline-block;
+    text-align: left;
+    width: 120px;
+    right: 10px;
+    height: 27px;
+    color: #7562e0
+}
+
+.loginsignupParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 51px;
+}
+
+.groupWrapper {
+    position: absolute;
+    top: 0px;
+    left: 136px;
+    width: 233px;
+    height: 51px;
+    text-align: center;
+}
+
+.group {
+    width: 369px;
+    position: relative;
+    height: 51px;
+}
+
+.parent {
+    width: 100%;
+    position: relative;
+    height: 148px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 50px 100px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 18px;
+    color: #7562e0;
+    font-family: NanumGothic;
+}

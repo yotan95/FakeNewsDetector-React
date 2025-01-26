@@ -1,0 +1,5 @@
+# fnm 환경 설정
+if (Test-Path (Join-Path $env:USERPROFILE ".fnm\fnm.ps1")) {
+    . (Join-Path $env:USERPROFILE ".fnm\fnm.ps1")
+    fnm env --use-on-cd | Invoke-Expression
+}
