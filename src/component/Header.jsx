@@ -3,7 +3,7 @@ import './Header.css';
 import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 export function Header() {
-    const { isAuthenticated, logout } = useAuth();
+    const { isAuthenticated, logout, member } = useAuth();
 
     const handleLogout = () => {
         logout();
@@ -13,39 +13,46 @@ export function Header() {
     return (
         (
             <div className="parent">
-                <Link to="/">
+                <Link to="/" style={{ textDecoration: 'none' }}>
                     <img className="icon" alt="" src="/logo.png" />
                 </Link>
                 <div className="group">
-                    <Link to="/board">
+                    <Link to="/board" style={{ textDecoration: 'none' }}>
                         <b className="b">게시판</b>
                     </Link>
+                    {(isAuthenticated && member.role === "ROLE_USER") && (
+                        <Link to="/history" style={{ textDecoration: 'none' }}>
+                            <b className="b">탐지 내역</b>
+                        </Link>
+                    )}
                     {isAuthenticated ? (
                         <div className="groupWrapper">
                             <div className="loginsignupParent">
-                                <Link to="/" onClick={handleLogout}>
+                                <Link to="/" onClick={handleLogout} style={{ textDecoration: 'none' }}>
                                     <div className="loginsignup">
                                         <div className="wrapper">
                                             <b className="b1">로그아웃</b>
                                         </div>
                                     </div>
                                 </Link>
-                                <Link to="/mypage">
-                                    <b className="b2">마이 페이지</b>
-                                </Link>
+                                {member.role === "ROLE_USER" && (
+                                    <Link to="/mypage" style={{ textDecoration: 'none' }}>
+                                        <b className="b2">마이 페이지</b>
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     ) : (
                         <div className="groupWrapper">
                             <div className="loginsignupParent">
-                                <Link to="/signup">
+                                <Link to="/signup" style={{ textDecoration: 'none' }}>
                                     <div className="loginsignup">
                                         <div className="wrapper">
                                             <b className="b1">회원가입</b>
                                         </div>
                                     </div>
                                 </Link>
-                                <Link to="/login">
+                                <Link to="/login" style={{ textDecoration: 'none' }}>
                                     <b className="b2">로그인</b>
                                 </Link>
                             </div>

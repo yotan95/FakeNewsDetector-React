@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import './ModalStyles.css';
 import { BoardPasswordCheck } from '../api/board.api';
 import { toast } from 'react-toastify';
+import { useAuth } from '../context/AuthContext';
 
 export function Board() {
     const location = useLocation();
@@ -16,7 +17,7 @@ export function Board() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [password, setPassword] = useState('');
     const [selectedBoard, setSelectedBoard] = useState(null);
-
+    const { isAuthenticated, member } = useAuth();
     const navigate = useNavigate();
     // 모달 열기
     const openModal = (board) => {
@@ -29,7 +30,10 @@ export function Board() {
         setModalIsOpen(false);
     };
     const handleClick = (board) => {
-        if (board.lock) {
+        if (member != null || member?.role == "ROLE_ADMIN") {
+            navigate(`/board/${board.id}`, { state: { password: '' } });
+        }
+        else if (board.lock) {
             openModal(board);
         } else {
             navigate(`/board/${board.id}`, { state: { password: '' } });
@@ -81,18 +85,24 @@ export function Board() {
             }
         });
     }, []);
+    const handleWriteButtonClick = () => {
+        if (isAuthenticated && member) {
+            navigate('/board/write');
+        } else {
+            toast.error("로그인이 필요합니다.");
+            navigate('/login');
+        }
 
+    }
     return (
         <div className="board-div">
             <div className="board-frame-2">
                 <div className="board-frame-3">
                     <div className="board-large-title">고객문의 게시판</div>
-                    <Link to="/board/write">
-                        <button className="board-button">
-                            <img className="board-icon-edit" src="/icon-edit.png" />
-                            <div className="board-text">글 작성</div>
-                        </button>
-                    </Link>
+                    <button className="board-button" onClick={handleWriteButtonClick}>
+                        <img className="board-icon-edit" src="/icon-edit.png" />
+                        <div className="board-text">글 작성</div>
+                    </button>
                 </div>
                 <div className="board-frame-wrapper">
                     <div className="board-frame-4">
@@ -117,7 +127,9 @@ export function Board() {
                                 </div>
                                 <div className="board-user"><div className="board-text-wrapper-6">{board.user}</div></div>
                                 <div className="board-date"><div className="board-text-wrapper-7">{board.createdDate.substring(0, 10)}</div></div>
-                                <div className="board-state-2"><div className="board-text-wrapper-8">{board.answer ? "답변완료" : "답변대기"}</div></div>
+                                {board.answer ? (<div className="board-state"><div className="board-text-wrapper-8">답변완료</div></div>
+                                ) : (<div className="board-state-2"><div className="board-text-wrapper-8">답변대기</div></div>
+                                )}
                             </div>
                             // </Link>
                         ))}

@@ -156,6 +156,7 @@
     background-color: #8976fd;
     border-radius: 6px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .board-icon-edit {

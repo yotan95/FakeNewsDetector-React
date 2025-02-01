@@ -31,26 +31,26 @@ export function Login() {
     }
 
     return (
-        <div className="overlap">
-            <img className="img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
-            <img className="element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
-            <img className="element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
-            <img className="image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
-            <img className="image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
-            <img className="image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
-            <img className="element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
-            <div className="login-container">
-                <h1 className="login-title">로그인</h1>
-                <form className="login-form" onSubmit={handleLogin}>
-                    <div className="form-group">
+        <div className="login-overlap">
+            <img className="login-img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
+            <img className="login-element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
+            <img className="login-element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
+            <img className="login-image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
+            <img className="login-image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
+            <img className="login-image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
+            <img className="login-element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
+            <div className="login-login-container">
+                <h1 className="login-login-title">로그인</h1>
+                <form className="login-login-form" onSubmit={handleLogin}>
+                    <div className="login-form-group">
                         <label htmlFor="email">이메일</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일을 입력하세요" />
                     </div>
-                    <div className="form-group">
+                    <div className="login-form-group">
                         <label htmlFor="password">비밀번호</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="비밀번호를 입력하세요" />
                     </div>
-                    <button type="submit" className="login-button">로그인</button>
+                    <button type="submit" className="login-login-button">로그인</button>
                 </form>
             </div>
         </div>

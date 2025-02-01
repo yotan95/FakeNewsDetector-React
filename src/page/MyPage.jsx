@@ -174,7 +174,7 @@ export const MyPage = () => {
                     <div className="mp-form-group">
                         <label htmlFor="phone">휴대전화 번호</label>
                         <div className="phone-wrapper">
-                            <div className="country-selector">
+                            <div className="mp-country-selector">
                                 <select id="country-code" required value={countryCode} onChange={(e) => handleCountryCodeChange(e)}>
                                     <option value="+82" data-flag="kr">🇰🇷 +82</option>
                                     <option value="+1" data-flag="us">🇺🇸 +1</option>

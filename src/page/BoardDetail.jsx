@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Modal from 'react-modal';
 import { toast } from 'react-toastify';
+import { postComment } from '../api/comment.api';
+
 export const BoardDetail = () => {
     const location = useLocation()
     const [boardDetail, setBoardDetail] = useState({});
@@ -15,7 +17,7 @@ export const BoardDetail = () => {
     const { member } = useAuth();
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [deletePassword, setDeletePassword] = useState('');
-
+    const [comment, setComment] = useState('');
     // 모달 열기
     const openModal = () => {
         setModalIsOpen(true);
@@ -58,6 +60,36 @@ export const BoardDetail = () => {
             }
         });
     }, []);
+
+    const handleDownload = async () => {
+        const response = await fetch(`http://localhost:8080/download/${boardDetail.imageUrl}`);
+
+        const blob = await response.blob();
+        const downloadUrl = window.URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.setAttribute('download', boardDetail.imageUrl);
+        document.body.appendChild(link);
+        link.click();
+
+        link.parentNode.removeChild(link);
+        window.URL.revokeObjectURL(downloadUrl);
+    }
+    const handleComment = () => {
+        let commentData = {
+            board_id: id,
+            content: comment,
+        }
+        const response = postComment(commentData);
+        response.then((res) => {
+            if (res.data.status === 200) {
+                window.location.reload();
+            } else {
+                toast.error(res.data.message);
+            }
+        })
+    }
     const customStyles = {
         content: {
             top: '50%',
@@ -103,6 +135,11 @@ export const BoardDetail = () => {
                             <img className="bd-img" src="/Line-49.png" />
                             <p className="bd-p">{boardDetail.title}</p>
                         </div>
+                        {boardDetail.imageUrl && (
+                            <div className="bd-frame-5" onClick={handleDownload}>
+                                <div className="bd-image-overlap"><div className="bd-image-text">이미지 다운로드</div></div>
+                            </div>
+                        )}
                         <div className="bd-frame-6">
                             <div className="bd-text-wrapper-7">문의 내용</div>
                             <div className="bd-flexcontainer">
@@ -119,10 +156,19 @@ export const BoardDetail = () => {
                             <p className="bd-text">
                                 <span className="bd-span">{boardDetail.comment}<br /></span>
                             </p>
+                            {member?.role == "ROLE_ADMIN" && (
+                                <textarea className="bd-textarea" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
+
+                            )}
                         </div>
                     </div>
-                    {member?.id === boardDetail?.memberId && (
+                    {(member?.id === boardDetail?.memberId || member?.role === "ROLE_ADMIN") && (
                         <div className="bd-frame-8">
+                            {member?.role === "ROLE_ADMIN" && (
+                                <div className="bd-overlap-group-wrapper" onClick={() => handleComment()}>
+                                    <div className="bd-overlap-group"><div className="bd-text-wrapper-8">답변</div></div>
+                                </div>
+                            )}
                             <Link to={`/board/modify/${boardDetail.id}`} state={{ boardDetail }}>
                                 <div className="bd-overlap-group-wrapper">
                                     <div className="bd-overlap-group"><div className="bd-text-wrapper-8">수정</div></div>
