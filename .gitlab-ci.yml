@@ -16,7 +16,7 @@ build_react:
     docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     docker build -t yotan9508/fakedetection-react:$CI_COMMIT_SHA .
     docker push yotan9508/fakedetection-react:$CI_COMMIT_SHA
-    docker build -t yotan9508/fakedetection-react:latest
+    docker build -t yotan9508/fakedetection-react:latest .
     docker push yotan9508/fakedetection-react:latest
 
 deploy_react:
