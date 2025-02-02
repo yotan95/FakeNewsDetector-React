@@ -20,6 +20,7 @@ build_react:
 deploy_react:
   stage: deploy
   script: |
+    apk update && apk add curl
     echo "Triggering deployment on EC2..."
     curl -X POST "http://${EC2_PUBLIC_IP}:5000/deploy-react"
   only:
