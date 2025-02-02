@@ -23,7 +23,7 @@ deploy_react:
   stage: deploy
   script: |
     echo "Deploying React app..."
-    ssh -o StrictHostKeyChecking=no ubuntu@EC2_PUBLIC_IP << 'EOF'
+    ssh -o StrictHostKeyChecking=no ubuntu@${EC2_PUBLIC_IP} << 'EOF'
       docker pull yotan9508/fakedetection-react:$CI_COMMIT_SHA
       docker stop react-container || true
       docker rm react-container || true
