@@ -1,0 +1,31 @@
+default:
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  before_script:
+    - docker info
+
+stages:
+  - build
+  - deploy
+
+build_react:
+  stage: build
+  script: |
+    echo "Building React app..."
+    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    docker build -t yotan9508/react-app:$CI_COMMIT_SHA .
+    docker push yotan9508/react-app:$CI_COMMIT_SHA
+
+deploy_react:
+  stage: deploy
+  script: |
+    echo "Deploying React app..."
+    docker pull yotan9508/react-app:$CI_COMMIT_SHA
+    docker stop react-container || true
+    docker rm react-container || true
+    docker run -d -p 3000:80 --name react-container yotan9508/react-app:$CI_COMMIT_SHA
+  tags:
+    - react-ec2-runner
+  only:
+    - main
