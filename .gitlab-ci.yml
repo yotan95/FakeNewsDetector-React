@@ -3,9 +3,10 @@ default:
   services:
     - docker:24.0.5-dind
   before_script:
+    - mkdir -p ~/.ssh  # SSH 디렉토리 생성
     - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - eval $(ssh-agent)
+    - eval $(ssh-agent -s)  # ssh-agent 실행
     - ssh-add ~/.ssh/id_rsa
     - docker info
 
