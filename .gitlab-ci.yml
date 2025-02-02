@@ -20,8 +20,12 @@ build_react:
 deploy_react:
   stage: deploy
   script: |
-    apk update && apk add curl
-    echo "Triggering deployment on EC2..."
-    curl -X POST "http://${EC2_PUBLIC_IP}:5000/deploy-react"
+    echo "Deploying React app..."
+    docker pull yotan9508/fakedetection-react:$CI_COMMIT_SHA
+    docker stop react-container || true
+    docker rm react-container || true
+    docker run -d -p 3000:80 --name react-container yotan9508/fakedetection-react:$CI_COMMIT_SHA
+  tags:
+    - react-ec2-runner
   only:
     - main
