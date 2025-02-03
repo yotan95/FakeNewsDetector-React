@@ -62,7 +62,7 @@ export const BoardDetail = () => {
     }, []);
 
     const handleDownload = async () => {
-        const response = await fetch(`http://localhost:8080/download/${boardDetail.imageUrl}`);
+        const response = await fetch(`http://localhost:8080/download?file=${boardDetail.imageUrl}`);
 
         const blob = await response.blob();
         const downloadUrl = window.URL.createObjectURL(blob);
