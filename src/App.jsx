@@ -14,6 +14,8 @@ import { ToastContainer } from 'react-toastify';
 import { BoardModify } from './page/BoardModify';
 import { History } from './page/History';
 import { UrlPage } from './page/UrlPage';
+import { Pricing } from './page/Pricing';
+import { Footer } from './component/Footer';
 function Url() {
   const routes = useRoutes([
     {
@@ -46,6 +48,9 @@ function Url() {
     }, {
       path: '/url',
       element: <UrlPage />
+    }, {
+      path: '/pricing',
+      element: <Pricing />
     }
   ])
   return routes;

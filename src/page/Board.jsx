@@ -12,12 +12,14 @@ import { useAuth } from '../context/AuthContext';
 export function Board() {
     const location = useLocation();
     const query = new URLSearchParams(location.search);
-    const page = query.get("page");
+    const page = query.get("page") ? parseInt(query.get("page"), 10) : 1;
     const [boardList, setBoardList] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [password, setPassword] = useState('');
     const [selectedBoard, setSelectedBoard] = useState(null);
     const { isAuthenticated, member } = useAuth();
+    const [number, setNumber] = useState(page);
+    const [totalPages, setTotalPaqges] = useState();
     const navigate = useNavigate();
     // 모달 열기
     const openModal = (board) => {
@@ -30,7 +32,7 @@ export function Board() {
         setModalIsOpen(false);
     };
     const handleClick = (board) => {
-        if (member != null || member?.role == "ROLE_ADMIN") {
+        if (member != null && member?.role == "ROLE_ADMIN") {
             navigate(`/board/${board.id}`, { state: { password: '' } });
         }
         else if (board.lock) {
@@ -74,17 +76,18 @@ export function Board() {
     };
     useEffect(() => {
         // 게시판 목록 가져오기
-        const boardList = getBoardList(page);
+        const boardList = getBoardList(page - 1);
         boardList.then((res) => {
             if (res.data.status === 200) {
                 console.log(res.data.data);
                 setBoardList(res.data.data.content);
                 console.log(res.data.data.content);
+                setTotalPaqges(res.data.data.totalPages);
             } else {
                 alert("게시글 목록 불러오기 실패");
             }
         });
-    }, []);
+    }, [page]);
     const handleWriteButtonClick = () => {
         if (isAuthenticated && member) {
             navigate('/board/write');
@@ -94,6 +97,18 @@ export function Board() {
         }
 
     }
+    const handlePrevious = () => {
+        if (number > 0) {
+            // setNumber(number - 1);
+            page -= 1;
+        }
+    };
+
+    const handleNext = () => {
+        if (number < totalPages - 1) {
+            setNumber(number + 1);
+        }
+    };
     return (
         <div className="board-div">
             <div className="board-frame-2">
@@ -106,13 +121,20 @@ export function Board() {
                 </div>
                 <div className="board-frame-wrapper">
                     <div className="board-frame-4">
-                        <div className="board-frame-13">
-                            <div className="board-num"><div className="board-text-wrapper-4">1</div></div>
-                            <div className="board-category"><div className="board-text-wrapper-10">공지</div></div>
-                            <div className="board-title"><p className="board-p">결제 기간에 따른 할인 문의</p></div>
-                            <div className="board-user"><div className="board-text-wrapper-6">a06341</div></div>
-                            <div className="board-date"><div className="board-text-wrapper-7">2025-01-21</div></div>
-                            <div className="board-state"><div className="board-text-wrapper-8">답변완료</div></div>
+                        <div>
+                            <div className="board-frame-11" style={{ cursor: 'default' }}>
+                                <div className="board-num"><div className="board-text-wrapper-4">번호</div></div>
+                                <div className="board-category"><div className="board-text-wrapper-5">카테고리</div></div>
+                                <div className="board-title">
+                                    <div className="board-frame-12">
+                                        <p className="board-p">재목</p>
+                                    </div>
+                                </div>
+                                <div className="board-user"><div className="board-text-wrapper-6">작성자</div></div>
+                                <div className="board-date"><div className="board-text-wrapper-7">작성일</div></div>
+                                <div className="board-state-comment"><div className="board-text-wrapper-comment">답변
+                                </div></div>
+                            </div>
                         </div>
                         {boardList.map((board) => (
                             // <Link to={`/board/${board.id}`} key={board.id} style={{ textDecoration: 'none' }}>
@@ -133,33 +155,32 @@ export function Board() {
                             </div>
                             // </Link>
                         ))}
-                        <div className="board-frame-11">
-                            <div className="board-num"><div className="board-text-wrapper-4">186</div></div>
-                            <div className="board-category"><div className="board-text-wrapper-5">사이트 이용</div></div>
-                            <div className="board-title">
-                                <div className="board-frame-12">
-                                    <p className="board-p">결제 기간에 따른 할인 문의</p>
-                                    <img className="board-img" src="lock.png" />
-                                </div>
-                            </div>
-                            <div className="board-user"><div className="board-text-wrapper-6">a06341</div></div>
-                            <div className="board-date"><div className="board-text-wrapper-7">2025-01-21</div></div>
-                            <div className="board-state-2"><div className="board-text-wrapper-8">답변대기</div></div>
-                        </div>
-                        <div className="board-frame-11">
-                            <div className="board-num"><div className="board-text-wrapper-4">186</div></div>
-                            <div className="board-category"><div className="board-text-wrapper-5">사이트 이용</div></div>
-                            <div className="board-title">
-                                <div className="board-frame-12">
-                                    <p className="board-p">결제 기간에 따른 할인 문의</p>
-                                    <img className="board-img" src="lock.png" />
-                                </div>
-                            </div>
-                            <div className="board-user"><div className="board-text-wrapper-6">a06341</div></div>
-                            <div className="board-date"><div className="board-text-wrapper-7">2025-01-21</div></div>
-                            <div className="board-state-2"><div className="board-text-wrapper-8">답변대기</div></div>
-                        </div>
+
                     </div>
+                    <div className="pagination-container">
+                        <button className="pagination-button prev" onClick={() => navigate(`/board?page=${page - 1}`)} disabled={page === 1}>
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Previous
+                        </button>
+                        {Array.from({ length: totalPages }, (_, i) => (
+                            <button
+                                key={i}
+                                className={`pagination-number ${i === page - 1 ? "active" : ""}`}
+                                onClick={() => { setNumber(i); navigate(`/board?page=${i + 1}`); }}
+                            >
+                                {i + 1}
+                            </button>
+                        ))}
+                        <button className="pagination-button next" onClick={() => navigate(`/board?page=${page + 1}`)} disabled={page === totalPages}>
+                            Next
+                            <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+
                 </div>
             </div>
             <Modal

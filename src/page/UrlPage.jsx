@@ -1,16 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import { postAnalysis } from '../api/analysis.api';
+import { getAnalysis } from '../api/analysis.api';
 import './Url.css';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export function UrlPage() {
     const [url, setUrl] = useState('')
     const navigation = useNavigate();
     const handleSubmit = () => {
-        const response = postAnalysis(url);
+        const response = getAnalysis(url);
         response.then((res) => {
             if (res.data.status === 200) {
                 navigation('/history');
+            } else {
+                toast.error(res.data.message);
             }
         })
     }
@@ -38,7 +41,7 @@ export function UrlPage() {
                     <div className="url-ui-element-3">
                         <div className="url-bg2">
                         </div>
-                        <img className="url-checkmark-icon" alt="" src="static/images/Icon Border.svg" />
+                        <img className="url-checkmark-icon" alt="" src="/Icon Border.png" />
 
                         <b className="url-headline"> Project Updated</b>
                         <div className="url-text-mockup2">
@@ -52,11 +55,11 @@ export function UrlPage() {
                     </div>
                     <div className="url-fake-button">
                     </div>
-                    <img className="url-checkmark-icon1" alt="" src="static/images/Icon Border.svg" />
+                    <img className="url-checkmark-icon1" alt="" src="/Icon Border.png" />
 
-                    <img className="url-checkmark-icon2" alt="" src="static/images/Icon Border.svg" />
+                    <img className="url-checkmark-icon2" alt="" src="/Icon Border.png" />
 
-                    <img className="url-checkmark-icon3" alt="" src="static/images/Icon Border.svg" />
+                    <img className="url-checkmark-icon3" alt="" src="/Icon Border.png" />
 
                     <div className="url-text-mockup4">
                     </div>

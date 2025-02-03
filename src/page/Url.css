@@ -18,7 +18,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.url-04);
+    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
     width: 198px;
@@ -53,7 +53,7 @@
     top: 197px;
     left: 35px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 128px;
     height: 11px;
 }
@@ -63,7 +63,7 @@
     top: 219px;
     left: 59px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 80px;
     height: 11px;
 }
@@ -82,7 +82,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.url-04);
+    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
     width: 432px;
@@ -108,7 +108,7 @@
     top: 74px;
     left: 121px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 273px;
     height: 11px;
 }
@@ -118,7 +118,7 @@
     top: 97px;
     left: 121px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 182px;
     height: 11px;
 }
@@ -127,7 +127,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    box-shadow: 0px 2px 40px rgba(189, 189, 189, 0.url-11);
+    box-shadow: 0px 2px 40px rgba(189, 189, 189, 0.11);
     border-radius: 12px;
     background-color: #f9f9f9;
     width: 432px;
@@ -147,7 +147,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.url-04);
+    box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
     width: 285px;
@@ -159,7 +159,7 @@
     top: 322px;
     left: 31px;
     border-radius: 8px;
-    background-color: rgba(137, 118, 253, 0.url-34);
+    background-color: rgba(137, 118, 253, 0.34);
     width: 229px;
     height: 37px;
 }
@@ -193,7 +193,7 @@
     top: 130px;
     left: 31px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 156px;
     height: 11px;
 }
@@ -203,7 +203,7 @@
     top: 153px;
     left: 31px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 182px;
     height: 11px;
 }
@@ -213,7 +213,7 @@
     top: 237px;
     left: 64px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 80px;
     height: 11px;
 }
@@ -223,7 +223,7 @@
     top: 268px;
     left: 64px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 133px;
     height: 11px;
 }
@@ -233,7 +233,7 @@
     top: 206px;
     left: 64px;
     border-radius: 12px;
-    background-color: rgba(32, 72, 79, 0.url-1);
+    background-color: rgba(32, 72, 79, 0.1);
     width: 80px;
     height: 11px;
 }
@@ -296,6 +296,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 16px 36px 15px;
+    height: 55px;
+    cursor: pointer;
 }
 
 .url-email-text-input {

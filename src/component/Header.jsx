@@ -17,6 +17,9 @@ export function Header() {
                     <img className="icon" alt="" src="/logo.png" />
                 </Link>
                 <div className="group">
+                    <Link to="/pricing" style={{ textDecoration: 'none' }}>
+                        <b className="b">요금안내</b>
+                    </Link>
                     <Link to="/board" style={{ textDecoration: 'none' }}>
                         <b className="b">게시판</b>
                     </Link>

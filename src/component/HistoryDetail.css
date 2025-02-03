@@ -5,6 +5,12 @@
     align-items: flex-start;
     gap: 48px;
     position: relative;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    /* IE, Edge에서 스크롤바 숨기기 */
+    scrollbar-width: none;
+    /* Firefox에서 스크롤바 숨기기 */
+    padding-right: 10px;
 }
 
 .history-detail-div {
@@ -27,9 +33,10 @@
 
 .history-detail-element {
     position: relative;
-    width: 178px;
-    height: 126px;
+    width: 60%;
+    height: 60%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .history-detail-div-3 {
@@ -135,39 +142,39 @@
 
 .history-detail-group-2 {
     position: relative;
-    width: 244.history-detail-84px;
-    height: 18.history-detail-95px;
+    width: 100%;
+    height: 18.95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .history-detail-vector {
-    position: absolute;
     width: 11px;
     height: 11px;
-    top: 7px;
-    left: 0;
 }
 
 .history-detail-p {
-    position: absolute;
-    width: 229px;
-    top: 0;
-    left: 14px;
+    position: relative;
+    width: 100%;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 13.history-detail-3px;
+    font-size: 13.3px;
     letter-spacing: 0;
-    line-height: 20.history-detail-8px;
+    line-height: 20.8px;
     white-space: nowrap;
+    margin-left: 10px;
 }
 
 .history-detail-span {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 13.history-detail-3px;
+    font-size: 13.3px;
     letter-spacing: 0;
-    line-height: 20.history-detail-8px;
+    line-height: 20.8px;
 }
 
 .history-detail-text-wrapper-4 {
@@ -178,7 +185,7 @@
 .history-detail-group-wrapper {
     position: relative;
     width: 305px;
-    height: 60.history-detail-26px;
+    height: 60.26px;
 }
 
 .history-detail-overlap-group-wrapper {
@@ -191,7 +198,9 @@
     width: 305px;
     height: 60px;
     background-color: #8976fd99;
-    border-radius: 9.history-detail-27px;
+    border-radius: 9.27px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .history-detail-text-wrapper-5 {
@@ -201,19 +210,18 @@
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: #ffffff;
-    font-size: 20.history-detail-4px;
+    font-size: 20.4px;
     letter-spacing: 0;
-    line-height: 32.history-detail-1px;
+    line-height: 32.1px;
     white-space: nowrap;
 }
 
 .history-detail-img {
     position: relative;
-    width: 1118px;
+    width: 100%;
     height: 1px;
-    margin-left: -0.history-detail-50px;
-    margin-right: -0.history-detail-50px;
-    object-fit: cover;
+    margin-left: -0.50px;
+    margin-right: -0.50px;
 }
 
 .history-detail-div-8 {
@@ -231,7 +239,7 @@
     position: relative;
     align-self: stretch;
     height: 36px;
-    margin-top: -1.history-detail-00px;
+    margin-top: -1.00px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: #000000;
@@ -263,7 +271,7 @@
 
 .history-detail-group-3 {
     position: relative;
-    width: 139.history-detail-66px;
+    width: 139.66px;
     height: 32px;
 }
 
@@ -290,7 +298,7 @@
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: #707070;
-    font-size: 21.history-detail-3px;
+    font-size: 21.3px;
     letter-spacing: 0;
     line-height: normal;
 }
@@ -298,28 +306,28 @@
 .history-detail-group-4 {
     position: relative;
     width: 192px;
-    height: 26.history-detail-16px;
+    height: 26.16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .history-detail-line-2 {
     top: 2px;
-    position: absolute;
     width: 2px;
     height: 25px;
     left: 0;
 }
 
 .history-detail-div-11 {
-    position: absolute;
+    position: relative;
     width: 177px;
-    top: 0;
-    left: 13px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: transparent;
-    font-size: 15.history-detail-6px;
+    font-size: 15.6px;
     letter-spacing: 0;
-    line-height: 24.history-detail-6px;
+    line-height: 24.6px;
     white-space: nowrap;
 }
 
@@ -333,22 +341,21 @@
 
 .history-detail-group-5 {
     position: relative;
-    width: 165px;
-    height: 26.history-detail-16px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
 }
 
 .history-detail-no-of-openings {
-    position: absolute;
-    width: 150px;
-    top: 0;
-    left: 13px;
+    width: 100%;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: transparent;
-    font-size: 15.history-detail-6px;
+    font-size: 15.6px;
     letter-spacing: 0;
-    line-height: 24.history-detail-6px;
-    white-space: nowrap;
+    line-height: 24.6px;
+    white-space: break-word;
 }
 
 .history-detail-div-12 {
@@ -388,7 +395,7 @@
     position: relative;
     align-self: stretch;
     height: 30px;
-    margin-top: -1.history-detail-00px;
+    margin-top: -1.00px;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: #202020;
@@ -401,7 +408,7 @@
     position: relative;
     width: 912px;
     height: 36px;
-    margin-top: -1.history-detail-00px;
+    margin-top: -1.00px;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #8a8684;
@@ -414,7 +421,7 @@
     position: relative;
     width: 116px;
     height: 36px;
-    margin-right: -2.history-detail-00px;
+    margin-right: -2.00px;
 }
 
 .history-detail-overlap-group-2 {
@@ -423,6 +430,11 @@
     height: 36px;
     background-color: #8976fd;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.history-detail-overlap-group:hover {
+    background-color: #8976fd;
 }
 
 .history-detail-text-wrapper-12 {
@@ -432,7 +444,7 @@
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #ffffff;
-    font-size: 14.history-detail-4px;
+    font-size: 14.4px;
     letter-spacing: 0;
     line-height: normal;
 }
