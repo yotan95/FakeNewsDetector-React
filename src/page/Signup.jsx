@@ -59,6 +59,9 @@ export function Signup() {
             toast.error("모든 동의 항목에 체크해야 합니다.");
             return;
         }
+        if (email.toLowerCase().includes("admin")) {
+            toast.error("사용할 수 없는 이메일입니다.")
+        }
 
         // 요청 보낼 데이터 객체 생성
         const userData = {
@@ -85,38 +88,38 @@ export function Signup() {
         setIsPasswordMatch(password === confirmPassword);
     }, [password, confirmPassword]);
     return (
-        <div className="overlap">
-            <img className="img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
-            <img className="element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
-            <img className="element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
-            <img className="image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
-            <img className="image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
-            <img className="image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
-            <img className="element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
-            <div className="signup-container">
-                <h1 className="signup-title">회원가입</h1>
-                <form className="signup-form" onSubmit={handleFormSubmit}>
-                    <div className="form-group">
+        <div className="signup-overlap">
+            <img className="signup-img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
+            <img className="signup-element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
+            <img className="signup-element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
+            <img className="signup-image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
+            <img className="signup-image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
+            <img className="signup-image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
+            <img className="signup-element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
+            <div className="signup-signup-container">
+                <h1 className="signup-signup-title">회원가입</h1>
+                <form className="signup-signup-form" onSubmit={handleFormSubmit}>
+                    <div className="signup-form-group">
                         <label htmlFor="email">이메일</label>
                         <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일을 입력하세요" />
                     </div>
-                    <div className="form-group">
+                    <div className="signup-form-group">
                         <label htmlFor="password">비밀번호</label>
                         <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="비밀번호를 입력하세요" />
                     </div>
-                    <label className="form-label">비밀번호는 최소 8글자 이상이여야 합니다.</label>
-                    <label className="form-label">비밀번호에는 최소 하나 이상의 특수문자가 포함되어있어야합니다<div className=""></div></label>
-                    <div className="form-group">
+                    <label className="signup-form-label">비밀번호는 최소 8글자 이상이여야 합니다.</label>
+                    <label className="signup-form-label">비밀번호에는 최소 하나 이상의 특수문자가 포함되어있어야합니다<div className="signup-"></div></label>
+                    <div className="signup-form-group">
                         <label htmlFor="confirmPassword">비밀번호 확인</label>
                         <input type="password" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required placeholder="비밀번호를 다시 입력하세요" />
                     </div>
                     {!isPasswordMatch && (
-                        <label className="form-label">비밀번호가 일치하지 않습니다.</label>
+                        <label className="signup-form-label">비밀번호가 일치하지 않습니다.</label>
                     )}
-                    <div className="form-group">
+                    <div className="signup-form-group">
                         <label htmlFor="phone">휴대전화 번호</label>
-                        <div className="phone-wrapper">
-                            <div className="country-selector">
+                        <div className="signup-phone-wrapper">
+                            <div className="signup-country-selector">
                                 <select id="country-code" required onChange={(e) => setCountryCode(e.target.value)}>
                                     <option value="+82" data-flag="kr">🇰🇷 +82</option>
                                     <option value="+1" data-flag="us">🇺🇸 +1</option>
@@ -125,30 +128,30 @@ export function Signup() {
                             </div>
                         </div>
                     </div>
-                    <div className="name-inputs">
-                        <div className="form-group">
+                    <div className="signup-name-inputs">
+                        <div className="signup-form-group">
                             <label htmlFor="name">이름</label>
                             <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="이름을 입력해주세요." required />
                         </div>
 
-                        <div className="form-group">
+                        <div className="signup-form-group">
                             <label htmlFor="nickName">닉네임</label>
                             <input type="text" id="nickName" value={nickName} onChange={(e) => setNickName(e.target.value)} placeholder="닉네임을 입력해주세요." required />
                         </div>
                     </div>
-                    <div className="form-group">
+                    <div className="signup-form-group">
                         <label htmlFor="svcAgmt">
                             <input type="checkbox" value={svcAgmt} onChange={(e) => setSvcAgmt(e.target.checked)} id="svcAgmt" required />
                             개인정보 수집 및 이용에 동의 하십니까?
                         </label>
                     </div>
-                    <div className="form-group">
+                    <div className="signup-form-group">
                         <label htmlFor="infoAgmt">
                             <input type="checkbox" value={infoAgmt} onChange={(e) => setInfoAgmt(e.target.checked)} id="infoAgmt" required />
                             서비스 이용약관에 동의 하십니까?
                         </label>
                     </div>
-                    <button className="signup-button">회원가입</button>
+                    <button className="signup-signup-button">회원가입</button>
                 </form>
             </div>
         </div>

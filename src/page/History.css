@@ -1,0 +1,56 @@
+/* .history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history-frame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1750px;
+    align-items: flex-start;
+    gap: 48px 104px;
+    position: relative;
+    flex: 0 0 auto;
+} */
+
+.history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+    height: 930px;
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 0px 50px
+}
+
+.history-frame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* ✅ 기본값: 3x3 */
+    gap: 48px 104px;
+    width: 1750px;
+    /* height: auto; */
+    transition: all 0.3s ease-in-out;
+    /* ✅ 부드러운 애니메이션 */
+    overflow-y: hidden;
+}
+
+/* ✅ 클릭 시 한 줄(1x9)로 변경 */
+.history-frame.column-view {
+    grid-template-columns: 1fr;
+    /* ✅ 1열(한 줄) */
+    gap: 20px;
+    width: 600px;
+    /* 원하는 너비 설정 */
+    align-items: center;
+    /* height: auto; */
+    overflow-y: auto;
+    max-height: 100%;
+    /* ✅ 스크롤 바 숨기기 */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE & Edge */
+}

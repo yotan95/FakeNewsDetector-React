@@ -1,0 +1,173 @@
+.history-comp-frame {
+    position: relative;
+    width: 465px;
+    height: 245px;
+    background-color: #ffffff;
+    border-radius: 16.56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    /* flex-direction: column; */
+    /* box-shadow: #000000; */
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.history-comp-frame.active {
+    background-color: #8976FD40;
+    /* ✅ 클릭된 항목 배경색 변경 */
+    border-radius: 10px;
+}
+
+.history-comp-frame .history-comp-group {
+    position: relative;
+    width: 216px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.history-comp-frame .history-comp-div {
+    display: flex;
+    flex-direction: column;
+    width: 216px;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    justify-content: flex-start;
+}
+
+.history-comp-frame .history-comp-div-wrapper {
+    position: relative;
+    width: 100%;
+    height: 28.07px;
+}
+
+.history-comp-frame .history-comp-text-wrapper {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 19px;
+    letter-spacing: 0;
+    line-height: 29.9px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.history-comp-frame .history-comp-div-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    height: fit-content;
+}
+
+.history-comp-frame .history-comp-img {
+    position: relative;
+    width: 9.42px;
+    height: 9.42px;
+}
+
+.history-comp-frame .history-comp-p {
+    position: relative;
+    width: 202px;
+    height: 100%;
+    /* margin-top: -1.05px; */
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 11.7px;
+    letter-spacing: 0;
+    line-height: 18.4px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.history-comp-frame .history-comp-div-3 {
+    display: flex;
+    flex-direction: column;
+    width: 132.27px;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.history-comp-frame .history-comp-div-4 {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.history-comp-frame .history-comp-text-wrapper-2 {
+    position: relative;
+    width: 41.83px;
+    height: 15.16px;
+    margin-top: -1.00px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 10.5px;
+    letter-spacing: 0;
+    line-height: 16.5px;
+    white-space: nowrap;
+}
+
+.history-comp-frame .history-comp-text-wrapper-3 {
+    position: relative;
+    width: 70.12px;
+    height: 14.65px;
+    margin-top: -1.00px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #777777;
+    font-size: 10.5px;
+    letter-spacing: 0;
+    line-height: 16.5px;
+    white-space: nowrap;
+}
+
+.history-comp-frame .history-comp-div-5 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.history-comp-frame .history-comp-text-wrapper-4 {
+    position: relative;
+    width: 108.85px;
+    height: 14.65px;
+    margin-top: -1.00px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #777777;
+    font-size: 10.5px;
+    letter-spacing: 0;
+    line-height: 16.5px;
+    white-space: nowrap;
+}
+
+.history-comp-frame .history-comp-element {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,0 +1,381 @@
+.pricing-frame {
+    display: flex;
+    flex-direction: column;
+    width: 1330px;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+    justify-self: center;
+}
+
+.pricing-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.pricing-text-wrapper {
+    position: relative;
+    align-self: stretch;
+    height: 81px;
+    margin-top: -1.00px;
+    font-family: "NanumGothic-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 60px;
+}
+
+.pricing-div-2 {
+    display: flex;
+    align-items: center;
+    gap: 61px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.pricing-frame-wrapper {
+    position: relative;
+    width: 285px;
+    height: 700px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-div-3 {
+    display: flex;
+    flex-direction: column;
+    width: 229px;
+    align-items: flex-start;
+    gap: 26px;
+    position: relative;
+    top: 28px;
+    left: 28px;
+    gap: 30px;
+}
+
+.pricing-headline {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1.00px;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 700;
+    color: #021a14;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: normal;
+    font-style: normal;
+}
+
+.pricing-headline-2 {
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 700;
+    color: rgba(32, 72, 79, 1);
+    font-size: 32px;
+    line-height: normal;
+    position: relative;
+    align-self: stretch;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.pricing-p {
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: rgba(32, 72, 79, 1);
+    font-size: 13px;
+    line-height: 150%;
+    position: relative;
+    align-self: stretch;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.pricing-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #8976fd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-sign-up {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.pricing-benefit-point {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.pricing-check-wrapper {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(220, 242, 237, 1);
+    ;
+    border-radius: 4.36px;
+}
+
+.pricing-check {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 4px;
+    left: 4px;
+}
+
+.pricing-text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: rgba(7, 33, 337, 1);
+    font-size: 15px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.pricing-div-4 {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    align-items: center;
+    position: relative;
+}
+
+.pricing-business {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 700px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #000000;
+}
+
+.pricing-div-5 {
+    display: flex;
+    flex-direction: column;
+    width: 229px;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+    top: 28px;
+    left: 28px;
+    gap: 30px;
+}
+
+.pricing-benefit-point-2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+}
+
+.pricing-badge {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 3px 12px;
+    position: absolute;
+    top: -12px;
+    left: 120px;
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-text-wrapper-3 {
+    width: fit-content;
+    font-family: "Plus Jakarta Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 16.5px;
+    position: relative;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.pricing-div-6 {
+    display: flex;
+    flex-direction: column;
+    width: 229px;
+    align-items: flex-start;
+    gap: 23px;
+    position: relative;
+    top: 28px;
+    left: 28px;
+    gap: 30px;
+}
+
+.pricing-headline-3 {
+    margin-top: -1.00px;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 700;
+    color: #011914;
+    font-size: 18px;
+    line-height: normal;
+    position: relative;
+    align-self: stretch;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.pricing-enterprise {
+    position: relative;
+    width: 285px;
+    height: 700px;
+    background-color: #8976fd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-div-7 {
+    display: flex;
+    flex-direction: column;
+    width: 229px;
+    align-items: flex-start;
+    gap: 22px;
+    position: relative;
+    top: 28px;
+    left: 28px;
+    gap: 30px;
+}
+
+.pricing-headline-4 {
+    margin-top: -1.00px;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: normal;
+    position: relative;
+    align-self: stretch;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.pricing-headline-5 {
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 150%;
+    position: relative;
+    align-self: stretch;
+    letter-spacing: 0px;
+    font-style: normal;
+}
+
+.pricing-sign-up-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 0px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pricing-sign-up-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: rgba(7, 33, 37, 1);
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.pricing-div-8 {
+    width: fit-content;
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 150%;
+    position: relative;
+    letter-spacing: 0px;
+    white-space: nowrap;
+    font-style: normal;
+}
+
+.pricing-span {
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    font-style: normal;
+}
+
+.pricing-text-wrapper-4 {
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 150%;
+    font-size: 16px;
+}
+
+.pricing-text-wrapper-5 {
+    align-self: stretch;
+    height: 27px;
+    font-family: "NanumGothic-Bold", Helvetica;
+    font-weight: 700;
+    color: #7562e0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 27px;
+    position: relative;
+    letter-spacing: 0;
+    white-space: nowrap;
+}

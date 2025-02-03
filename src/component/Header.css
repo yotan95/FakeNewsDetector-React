@@ -6,75 +6,83 @@
 }
 
 .b {
-    position: absolute;
     top: 12px;
     left: 0px;
     line-height: 150%;
-    color: #7562e0
+    color: #7562e0;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 .b1 {
-    width: 120px;
-    position: absolute;
+    width: fit-content;
+    /* position: absolute; */
     margin: 0 !important;
     top: 12px;
     left: 6px;
     line-height: 150%;
-    display: inline-block;
+    /* display: inline-block; */
     z-index: 0;
-    color: #7562e0
+    color: #7562e0;
+    white-space: nowrap;
 }
 
 .wrapper {
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
     border-radius: 15px;
     border: 1px solid #8976fd;
     box-sizing: border-box;
-    width: 132px;
+    width: fit-content;
     height: 51px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 16px 32px;
+
 }
 
 .loginsignup {
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 150px;
-    width: 132px;
+    width: fit-content;
     height: 51px;
 }
 
 .b2 {
-    position: absolute;
+    /* position: absolute; */
     top: 12px;
     left: 0px;
     line-height: 150%;
     display: inline-block;
     text-align: left;
-    width: 120px;
+    width: fit-content;
     right: 10px;
     height: 27px;
-    color: #7562e0
+    color: #7562e0;
+    white-space: nowrap;
 }
 
 .loginsignupParent {
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 100%;
     height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .groupWrapper {
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 136px;
-    width: 233px;
+    width: fit-content;
     height: 51px;
     text-align: center;
 }
@@ -83,6 +91,12 @@
     width: 369px;
     position: relative;
     height: 51px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    text-decoration-line: none;
 }
 
 .parent {
@@ -91,7 +105,7 @@
     height: 148px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     padding: 50px 100px;
     box-sizing: border-box;
