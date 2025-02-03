@@ -12,6 +12,10 @@ import { BoardDetail } from './page/BoardDetail';
 import { MyPage } from './page/MyPage';
 import { ToastContainer } from 'react-toastify';
 import { BoardModify } from './page/BoardModify';
+import { History } from './page/History';
+import { UrlPage } from './page/UrlPage';
+import { Pricing } from './page/Pricing';
+import { Footer } from './component/Footer';
 function Url() {
   const routes = useRoutes([
     {
@@ -38,6 +42,15 @@ function Url() {
     }, {
       path: '/board/modify/:id',
       element: <BoardModify />
+    }, {
+      path: '/history',
+      element: <History />
+    }, {
+      path: '/url',
+      element: <UrlPage />
+    }, {
+      path: '/pricing',
+      element: <Pricing />
     }
   ])
   return routes;

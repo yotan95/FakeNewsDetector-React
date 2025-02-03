@@ -1,4 +1,4 @@
-.login-container {
+.login-login-container {
     position: absolute;
     top: 50%;
     right: 100px;
@@ -7,11 +7,11 @@
     background: white;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.login-1);
     z-index: 1;
 }
 
-.login-title {
+.login-login-title {
     font-family: "Nanum Gothic", Helvetica;
     font-size: 24px;
     font-weight: 700;
@@ -20,26 +20,26 @@
     margin-bottom: 30px;
 }
 
-.login-form {
+.login-login-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-group {
+.login-form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.form-group label {
+.login-form-group label {
     font-family: "Nanum Gothic", Helvetica;
     font-size: 14px;
     font-weight: 700;
     color: #332c5c;
 }
 
-.form-group input {
+.login-form-group input {
     padding: 12px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -47,16 +47,16 @@
     font-size: 14px;
 }
 
-.form-group input:focus {
+.login-form-group input:focus {
     outline: none;
     border-color: #7562e0;
 }
 
-.form-group input::placeholder {
+.login-form-group input::placeholder {
     color: #cccccc;
 }
 
-.login-button {
+.login-login-button {
     background-color: #8976fd;
     color: white;
     border: none;
@@ -69,15 +69,206 @@
     margin-top: 10px;
 }
 
-.login-button:hover {
+.login-login-button:hover {
     background-color: #7562e0;
 }
 
-.name-inputs {
+.login-name-inputs {
     display: flex;
     gap: 16px;
 }
 
-.name-inputs .form-group {
+.login-name-inputs .login-form-group {
     flex: 1;
+}
+
+.login-overlap {
+    position: absolute;
+    width: 1722px;
+    height: 740px;
+    top: 275px;
+    left: 81px;
+}
+
+.login-group-2 {
+    position: absolute;
+    width: 738px;
+    height: 550px;
+    top: 17px;
+    left: 984px;
+}
+
+.login-button {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    width: 197px;
+    height: 59px;
+    top: 491px;
+    left: 124px;
+    background-color: #8976fd;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.login-text-wrapper-2 {
+    width: 133px;
+    top: 12px;
+    left: 41px;
+    font-weight: 800;
+    color: #f9f9f9;
+    font-size: 25px;
+    line-height: normal;
+    position: absolute;
+    font-family: "Nanum Gothic", Helvetica;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.login-overlap-group {
+    position: absolute;
+    width: 734px;
+    height: 448px;
+    top: 0;
+    left: 0;
+}
+
+.login-element {
+    position: absolute;
+    width: 232px;
+    height: 208px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.login-URL {
+    position: absolute;
+    width: 100%;
+    top: 376px;
+    left: 132px;
+    font-family: "NanumGothicOTF-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 40px;
+}
+
+.login-FAKE-NEWS-DETECTER {
+    position: absolute;
+    width: 610px;
+    top: 99px;
+    left: 124px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Tilt Warp", Helvetica;
+    font-weight: 400;
+    color: #332c5c;
+    font-size: 100px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.login-img {
+    position: absolute;
+    width: 637px;
+    height: 690px;
+    top: 12px;
+    left: 363px;
+}
+
+.login-element-2 {
+    position: absolute;
+    width: 214px;
+    height: 278px;
+    top: 76px;
+    left: 117px;
+}
+
+.login-element-3 {
+    position: absolute;
+    width: 230px;
+    height: 172px;
+    top: 508px;
+    left: 0;
+    object-fit: cover;
+}
+
+.login-image {
+    position: absolute;
+    width: 378px;
+    height: 305px;
+    top: 0;
+    left: 292px;
+}
+
+.login-image-2 {
+    position: absolute;
+    width: 337px;
+    height: 106px;
+    top: 313px;
+    left: 524px;
+}
+
+.login-image-3 {
+    position: absolute;
+    width: 307px;
+    height: 277px;
+    top: 463px;
+    left: 473px;
+}
+
+.login-element-4 {
+    position: absolute;
+    width: 393px;
+    height: 330px;
+    top: 318px;
+    left: 43px;
+}
+
+.login-text-wrapper-3 {
+    width: 89px;
+    top: 1017px;
+    left: 960px;
+    font-weight: 700;
+    color: #7562e0;
+    font-size: 18px;
+    line-height: 27px;
+    position: absolute;
+    font-family: "Nanum Gothic", Helvetica;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.login-frame {
+    width: 132px;
+    height: 51px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #8976fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-text-wrapper-4 {
+    font-weight: 700;
+    color: #7562e0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 27px;
+    font-family: "Nanum Gothic", Helvetica;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.login-element-5 {
+    position: absolute;
+    width: 181px;
+    height: 65px;
+    top: 63px;
+    left: 106px;
+    object-fit: cover;
 }
