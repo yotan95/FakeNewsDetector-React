@@ -4,11 +4,14 @@ import './Pricing.css'
 import * as PortOne from "@portone/browser-sdk/v2";
 import { useState } from 'react';
 import { paymentComplete } from '../api/payment.api';
+import { useNavigate } from 'react-router-dom';
 export function Pricing() {
     const { member } = useAuth();
     const [paymentStatus, setPaymentStatus] = useState({
         status: "IDLE",
     })
+    const navigate = useNavigate();
+
     function randomId() {
         return [...crypto.getRandomValues(new Uint32Array(2))]
             .map((word) => word.toString(16).padStart(8, "0"))
@@ -16,6 +19,12 @@ export function Pricing() {
     }
 
     const handlePrice = async (nmame, price) => {
+        if (member == null) {
+            toast.error("로그인 필요");
+            navigate('/login');
+            return;
+        }
+
         const paymentId = randomId()
         const response = await PortOne.requestPayment({
             // Store ID 설정

@@ -3,6 +3,8 @@ import { signupApi } from '../api/member.api';
 import './Signup.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PrivacyConsentModal from '../component/modal/PrivacyConsentModal';
+import TermsModal from '../component/modal/TermsModal';
 export function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,6 +16,8 @@ export function Signup() {
     const [svcAgmt, setSvcAgmt] = useState(false);
     const [infoAgmt, setInfoAgmt] = useState(false);
     const [isPasswordMatch, setIsPasswordMatch] = useState(true); // 비밀번호 일치 여부 상태
+    const [privacyModelIsOpen, setPrivacyModelIsOpen] = useState(false);
+    const [termsModelIsOpen, setTermsModelIsOpen] = useState(false);
     const navigate = useNavigate();
     // 비밀번호 유효성 검사 함수
     const checkPasswordStrength = (password) => {
@@ -22,7 +26,24 @@ export function Signup() {
 
         return minLengthValid && specialCharValid;
     };
+    const handleTermsAgree = () => {
+        setInfoAgmt(true);
+        setTermsModelIsOpen(false);
+    };
 
+    const handleTermsNotAgree = () => {
+        setInfoAgmt(false);
+        setTermsModelIsOpen(false);
+    };
+    const handlePrivacyAgree = () => {
+        setSvcAgmt(true);
+        setPrivacyModelIsOpen(false);
+    };
+
+    const handlePrivacyNotAgree = () => {
+        setSvcAgmt(false);
+        setPrivacyModelIsOpen(false);
+    };
     const handlePhoneChange = (e) => {
         e.preventDefault();
         // 입력된 값을 가져옴
@@ -139,19 +160,29 @@ export function Signup() {
                             <input type="text" id="nickName" value={nickName} onChange={(e) => setNickName(e.target.value)} placeholder="닉네임을 입력해주세요." required />
                         </div>
                     </div>
-                    <div className="signup-form-group">
+                    <div className="signup-form-group" onClick={() => setPrivacyModelIsOpen(true)}>
                         <label htmlFor="svcAgmt">
-                            <input type="checkbox" value={svcAgmt} onChange={(e) => setSvcAgmt(e.target.checked)} id="svcAgmt" required />
+                            <input type="checkbox" checked={svcAgmt} id="svcAgmt" required disabled />
                             개인정보 수집 및 이용에 동의 하십니까?
                         </label>
                     </div>
-                    <div className="signup-form-group">
+                    <div className="signup-form-group" onClick={() => setTermsModelIsOpen(true)}>
                         <label htmlFor="infoAgmt">
-                            <input type="checkbox" value={infoAgmt} onChange={(e) => setInfoAgmt(e.target.checked)} id="infoAgmt" required />
+                            <input type="checkbox" checked={infoAgmt} id="infoAgmt" required disabled />
                             서비스 이용약관에 동의 하십니까?
                         </label>
                     </div>
                     <button className="signup-signup-button">회원가입</button>
+                    <PrivacyConsentModal
+                        isOpen={privacyModelIsOpen}
+                        onClose={handlePrivacyNotAgree}
+                        onAgree={handlePrivacyAgree}
+                    />
+                    <TermsModal
+                        isOpen={termsModelIsOpen}
+                        onClose={handleTermsNotAgree}
+                        onAgree={handleTermsAgree}
+                    />
                 </form>
             </div>
         </div>

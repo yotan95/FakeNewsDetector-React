@@ -58,3 +58,9 @@ export const modifyBoard = async (requestBoard) => {
         },
     });
 }
+
+export const downloadImage = async (url) => {
+    return await httpApi.get(`/download?file=${url}`, {
+        responseType: 'blob',
+    });
+}

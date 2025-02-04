@@ -194,7 +194,6 @@ export function Board() {
                     </button>
                 </form>
             </Modal>
-            <div className="board-text-wrapper-11">요금 안내</div>
         </div>
     );
 }
