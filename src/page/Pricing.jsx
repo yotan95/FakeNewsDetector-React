@@ -40,8 +40,8 @@ export function Pricing() {
         }
         const requestPayment = {
             paymentId,
-            orderName,
-            'amount': totalAmount
+            orderName: nmame,
+            totalAmount: price
         }
         const completeResponse = paymentComplete(requestPayment);
         completeResponse.then((res) => {
