@@ -6,6 +6,7 @@ const API_BASE_URL =
         ? "http://localhost:8080" // 로컬 환경
         : "http://13.124.106.19:8080"; // 배포된 Spring 서버
 
+
 export const httpApi = axios.create({
     baseURL: API_BASE_URL,
     headers: {

@@ -112,6 +112,7 @@
     background-color: #8976fd;
     border-radius: 8px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .pricing-sign-up {
@@ -318,6 +319,7 @@
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .pricing-sign-up-2 {
