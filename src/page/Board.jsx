@@ -97,18 +97,6 @@ export function Board() {
         }
 
     }
-    const handlePrevious = () => {
-        if (number > 0) {
-            // setNumber(number - 1);
-            page -= 1;
-        }
-    };
-
-    const handleNext = () => {
-        if (number < totalPages - 1) {
-            setNumber(number + 1);
-        }
-    };
     return (
         <div className="board-div">
             <div className="board-frame-2">
