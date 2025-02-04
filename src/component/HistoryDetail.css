@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 872px;
     align-items: flex-start;
+    width: 1172px;
     gap: 48px;
     position: relative;
     overflow-y: auto;
@@ -348,7 +349,7 @@
 }
 
 .history-detail-no-of-openings {
-    width: 100%;
+    width: 90%;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: transparent;
@@ -415,6 +416,10 @@
     font-size: 23px;
     letter-spacing: 0;
     line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 }
 
 .history-detail-div-wrapper {

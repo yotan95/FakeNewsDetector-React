@@ -3,11 +3,20 @@ import { getAnalysis } from '../api/analysis.api';
 import './Url.css';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-
+import { useAuth } from '../context/AuthContext'
+// 로그인 버튼 후후
 export function UrlPage() {
     const [url, setUrl] = useState('')
+    const { member } = useAuth();
     const navigation = useNavigate();
     const handleSubmit = () => {
+        if (member === null) {
+            toast.error('로그인 필요');
+            navigation('/login');
+            return
+        }
+        if (!url.trim()) return; // url이 빈 문자열 또는 공백만 있으면 요청하지 않음
+
         const response = getAnalysis(url);
         response.then((res) => {
             if (res.data.status === 200) {
