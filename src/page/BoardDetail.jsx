@@ -1,6 +1,6 @@
 import './BoardDetail.css'
 import { useEffect, useState } from 'react';
-import { getBoardDetail, deleteBoard } from '../api/board.api';
+import { getBoardDetail, deleteBoard, downloadImage } from '../api/board.api';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -62,10 +62,10 @@ export const BoardDetail = () => {
     }, []);
 
     const handleDownload = async () => {
-        const response = await fetch(`http://13.124.106.19:8080/download?file=${boardDetail.imageUrl}`);
+        const response = await fetch(`http://localhost:8080/download?file=${boardDetail.imageUrl}`);
 
-        const blob = await response.blob();
-        const downloadUrl = window.URL.createObjectURL(blob);
+        // 이미 Blob 객체이므로 변환할 필요 없음
+        const downloadUrl = window.URL.createObjectURL(response.data);
 
         const link = document.createElement('a');
         link.href = downloadUrl;
@@ -73,7 +73,7 @@ export const BoardDetail = () => {
         document.body.appendChild(link);
         link.click();
 
-        link.parentNode.removeChild(link);
+        document.body.removeChild(link);
         window.URL.revokeObjectURL(downloadUrl);
     }
     const handleComment = () => {

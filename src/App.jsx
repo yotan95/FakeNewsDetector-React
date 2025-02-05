@@ -3,58 +3,48 @@ import { BrowserRouter, useRoutes } from 'react-router-dom';
 import { Header } from './component/Header';
 import { Home, Index } from './page/Home';
 import { useEffect } from 'react';
-import { Login } from './page/Login';
-import { Signup } from './page/Signup';
 import { AuthProvider } from './context/AuthContext';
-import { Board } from './page/Board';
-import { BoardWrite } from './page/BoardWrite';
-import { BoardDetail } from './page/BoardDetail';
-import { MyPage } from './page/MyPage';
 import { ToastContainer } from 'react-toastify';
-import { BoardModify } from './page/BoardModify';
-import { History } from './page/History';
-import { UrlPage } from './page/UrlPage';
-import { Pricing } from './page/Pricing';
-import { Footer } from './component/Footer';
-function Url() {
-  const routes = useRoutes([
-    {
-      path: '/',
-      element: <Home />
-    }, {
-      path: '/login',
-      element: <Login />
-    }, {
-      path: '/signup',
-      element: <Signup />
-    }, {
-      path: '/board',
-      element: <Board />
-    }, {
-      path: '/board/write',
-      element: <BoardWrite />
-    }, {
-      path: 'board/:id',
-      element: <BoardDetail />
-    }, {
-      path: 'mypage',
-      element: <MyPage />
-    }, {
-      path: '/board/modify/:id',
-      element: <BoardModify />
-    }, {
-      path: '/history',
-      element: <History />
-    }, {
-      path: '/url',
-      element: <UrlPage />
-    }, {
-      path: '/pricing',
-      element: <Pricing />
-    }
-  ])
-  return routes;
-}
+import AppRoutes from './router/AppRoutes';
+// function Url() {
+//   const routes = useRoutes([
+//     {
+//       path: '/',
+//       element: <Home />
+//     }, {
+//       path: '/login',
+//       element: <Login />
+//     }, {
+//       path: '/signup',
+//       element: <Signup />
+//     }, {
+//       path: '/board',
+//       element: <Board />
+//     }, {
+//       path: '/board/write',
+//       element: <BoardWrite />
+//     }, {
+//       path: 'board/:id',
+//       element: <BoardDetail />
+//     }, {
+//       path: 'mypage',
+//       element: <MyPage />
+//     }, {
+//       path: '/board/modify/:id',
+//       element: <BoardModify />
+//     }, {
+//       path: '/history',
+//       element: <History />
+//     }, {
+//       path: '/url',
+//       element: <UrlPage />
+//     }, {
+//       path: '/pricing',
+//       element: <Pricing />
+//     }
+//   ])
+//   return routes;
+// }
 
 function App() {
   useEffect(() => {
@@ -81,7 +71,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <ToastContainer />
-          <Url />
+          <AppRoutes />
         </BrowserRouter>
       </AuthProvider>
     </div>
