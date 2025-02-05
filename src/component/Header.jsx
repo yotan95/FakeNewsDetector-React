@@ -39,7 +39,7 @@ export function Header() {
                                     </div>
                                 </Link>
                                 {member.role === "ROLE_USER" && (
-                                    <Link to="/mypage" style={{ textDecoration: 'none' }}>
+                                    <Link to="/mypage2" style={{ textDecoration: 'none' }}>
                                         <b className="b2">마이 페이지</b>
                                     </Link>
                                 )}

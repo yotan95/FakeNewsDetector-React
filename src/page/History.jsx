@@ -52,8 +52,8 @@ export const History = () => {
         })
     }, [page])
     return (
-        <div>
-            <div className="history-index">영상 분석 내용▶️ </div>
+        <div className="main-frame">
+            <div className="history-index">영상 분석 기록 > </div>
             <div className="history-container">
                 <div ref={historyRef} className={`history-frame ${isColumn ? "column-view" : ""}`}>
                     {history.map((hist, index) => (
