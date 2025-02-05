@@ -14,6 +14,16 @@
     flex: 0 0 auto;
 } */
 
+.history-index {
+    padding-left: 5%;
+    color: #000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .history-container {
     display: flex;
     justify-content: center;
