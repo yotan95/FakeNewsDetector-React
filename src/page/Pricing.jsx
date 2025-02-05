@@ -34,7 +34,8 @@ export function Pricing() {
             channelKey: "channel-key-5224a210-4736-4d8d-9ade-65a3364d0747",
             paymentId,
             orderName: nmame,
-            totalAmount: price,
+            // totalAmount: price,
+            totalAmount: 1000.,
             currency: "CURRENCY_KRW",
             payMethod: "CARD",
             customer: {
@@ -52,14 +53,15 @@ export function Pricing() {
             orderName: nmame,
             totalAmount: price
         }
-        const completeResponse = paymentComplete(requestPayment);
-        completeResponse.then((res) => {
-            if (res.data.status === 200) {
-                toast.success(res.data.message);
-            } else {
-                toast.error(res.data.message);
-            }
-        })
+        console.log(response);
+        // const completeResponse = paymentComplete(requestPayment);
+        // completeResponse.then((res) => {
+        //     if (res.data.status === 200) {
+        //         toast.success(res.data.message);
+        //     } else {
+        //         toast.error(res.data.message);
+        //     }
+        // })
     }
 
     return (
@@ -72,7 +74,7 @@ export function Pricing() {
                             <div className="pricing-headline">Basic</div>
                             <div className="pricing-headline-2">무료</div>
                             <p className="pricing-p">가짜 뉴스 확인 서비스를 처음 시작하거나 체험해보고 싶은 사용자에게 적합</p>
-                            <div className="pricing-buttons"><div className="pricing-sign-up">시작하기</div></div>
+                            <div className="pricing-buttons" onClick={() => navigate('/url')}><div className="pricing-sign-up">시작하기</div></div>
                             <div className="pricing-benefit-point">
                                 <div className="pricing-check-wrapper"><img className="pricing-check" src="https://c.animaapp.com/yPYaJCg8/img/check.svg" /></div>
                                 <div className="pricing-text-wrapper-2">하루 3건의 뉴스&nbsp;&nbsp;분석 제공</div>
@@ -166,7 +168,6 @@ export function Pricing() {
                     </div>
                 </div>
             </div>
-            <div className="pricing-text-wrapper-5">요금 안내</div>
         </div>
 
     );

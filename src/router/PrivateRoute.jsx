@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const PrivateRoute = () => {
     const { member } = useAuth(); // member 값 확인
 
-    if (!member) {
+    if (!localStorage.getItem('token')) {
         return <Navigate to="/login" replace />; // 로그인 페이지로 리디렉트
     }
 

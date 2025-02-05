@@ -1,27 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 export function Home() {
+    const navigate = useNavigate();
     return (
-        <div className="home-overlap">
-            <div className="home-group-2">
-                <Link to="/url">
-                    <button className="home-button">
-                        <div className="home-text-wrapper-2">사용해보기</div>
-                    </button>
-                </Link>
-                <div className="home-overlap-group">
-                    <img className="home-element" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-20-211216-1.png" />
-                    <p className="home-URL">유튜브 URL 입력만으로<br />가짜뉴스 및 허위정보를 담고 있는 영상인지 확인해보세요!</p>
-                    <div className="home-FAKE-NEWS-DETECTER">FAKE NEWS<br />DETECTER</div>
+        <div className="main-frame">
+            <img className="main-element" src="/main.png" />
+            <div className="main-group">
+                <img className="main-img" src="/youtube.png" />
+                <div className="main-div">
+                    <div className="main-FAKE-NEWS-DETECTER">FAKE NEWS<br />DETECTER</div>
+                    <p className="main-URL">유튜브 URL 입력만으로<br />가짜뉴스 및 허위정보를 담고 있는 영상인지 확인해보세요!</p>
+                    <button className="main-button" onClick={() => navigate('/url')}><div className="main-text-wrapper">사용해보기</div></button>
                 </div>
             </div>
-            <img className="home-img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
-            <img className="home-element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
-            <img className="home-element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
-            <img className="home-image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
-            <img className="home-image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
-            <img className="home-image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
-            <img className="home-element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
         </div>
     );
 }

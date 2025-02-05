@@ -18,39 +18,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
-    height: 930px;
+    width: 80%;
+    height: 100%;
     position: relative;
     background-color: #f9f9f9;
-    padding: 0px 50px
+    justify-self: center;
+    align-self: center;
 }
 
 .history-frame {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* 부모 크기를 따르게 설정 */
     /* ✅ 기본값: 3x3 */
-    gap: 48px 104px;
-    width: 1750px;
+    gap: 48px 3%;
+    width: 90%;
     /* height: auto; */
     transition: all 0.3s ease-in-out;
     /* ✅ 부드러운 애니메이션 */
     overflow-y: hidden;
 }
 
+/* ✅ 화면이 1024px 이하일 때 2열로 변경 */
+@media (max-width: 1024px) {
+    .history-frame {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* ✅ 클릭 시 한 줄(1x9)로 변경 */
 .history-frame.column-view {
-    grid-template-columns: 1fr;
+    position: relative;
+    grid-template-columns: repeat(1, 90%);
     /* ✅ 1열(한 줄) */
     gap: 20px;
-    width: 600px;
+    width: 55%;
+    top: 0px;
+    min-width: 360px;
+    height: 100%;
+    max-height: 1080px;
+    padding-right: 5%;
     /* 원하는 너비 설정 */
     align-items: center;
     /* height: auto; */
     overflow-y: auto;
-    max-height: 100%;
+    /* max-height: 100%; */
     /* ✅ 스크롤 바 숨기기 */
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
     /* IE & Edge */
+}
+
+.history-container-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background-color: #f9f9f9;
+    justify-content: center;
 }

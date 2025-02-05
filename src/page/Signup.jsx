@@ -110,13 +110,9 @@ export function Signup() {
     }, [password, confirmPassword]);
     return (
         <div className="signup-overlap">
-            <img className="signup-img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
-            <img className="signup-element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
-            <img className="signup-element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
-            <img className="signup-image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
-            <img className="signup-image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
-            <img className="signup-image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
-            <img className="signup-element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
+            <div className="signup-img-frame">
+                <img className="signup-img" src="/main.png" />
+            </div>
             <div className="signup-signup-container">
                 <h1 className="signup-signup-title">회원가입</h1>
                 <form className="signup-signup-form" onSubmit={handleFormSubmit}>

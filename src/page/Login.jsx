@@ -32,16 +32,12 @@ export function Login() {
 
     return (
         <div className="login-overlap">
-            <img className="login-img" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161402-1.png" />
-            <img className="login-element-2" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161343-1@2x.png" />
-            <img className="login-element-3" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161057-1@2x.png" />
-            <img className="login-image" src="https://c.animaapp.com/TFf1ian7/img/image4@2x.png" />
-            <img className="login-image-2" src="https://c.animaapp.com/TFf1ian7/img/image2@2x.png" />
-            <img className="login-image-3" src="https://c.animaapp.com/TFf1ian7/img/image3.png" />
-            <img className="login-element-4" src="https://c.animaapp.com/TFf1ian7/img/-----2025-01-22-161237-1@2x.png" />
+            <div className="login-img-frame">
+                <img className="login-img" src="/main.png" />
+            </div>
             <div className="login-login-container">
-                <h1 className="login-login-title">로그인</h1>
                 <form className="login-login-form" onSubmit={handleLogin}>
+                    <h1 className="login-login-title">로그인</h1>
                     <div className="login-form-group">
                         <label htmlFor="email">이메일</label>
                         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일을 입력하세요" />

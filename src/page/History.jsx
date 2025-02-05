@@ -54,7 +54,7 @@ export const History = () => {
         })
     }, [page])
     return (
-        <div>
+        <div className="history-container-container">
             <div className="history-container">
                 <div ref={historyRef} className={`history-frame ${isColumn ? "column-view" : ""}`}>
                     {history.map((hist, index) => (

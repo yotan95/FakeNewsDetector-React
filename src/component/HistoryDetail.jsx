@@ -27,9 +27,9 @@ export const HistoryDetail = ({ history }) => {
                 <div className="history-detail-div-7">
                     <div className="history-detail-group-2">
                         <img className="history-detail-vector" src="/history-date.png" />
-                        <p className="history-detail-p">
+                        <div className="history-detail-p">
                             <span className="history-detail-span">검색 일자 :</span> <span className="history-detail-text-wrapper-4">&nbsp;&nbsp;{history.detectionDate.split('T')[0]}</span>
-                        </p>
+                        </div>
                     </div>
                     <div className="history-detail-group-wrapper">
                         <div className="history-detail-overlap-group-wrapper">

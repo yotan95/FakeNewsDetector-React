@@ -5,278 +5,149 @@
 }
 
 .url-bg {
-    position: absolute;
-    top: 120px;
-    left: 102px;
     border-radius: 12px;
     background-color: #8976fd;
-    width: 320px;
-    height: 385px;
 }
 
 .url-bg1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
-    width: 198px;
-    height: 258px;
 }
 
-.url-avatar-icon {
-    position: absolute;
-    top: 29px;
-    left: 62px;
-    width: 73px;
-    height: 73px;
-}
+.url-avatar-icon {}
 
-.url-heading {
-    position: absolute;
-    top: 117px;
-    left: 38px;
-}
+.url-heading {}
 
 .url-subheading {
-    position: absolute;
-    top: 147px;
-    left: 41px;
     font-size: 14px;
     line-height: 150%;
     color: #072125;
 }
 
 .url-text-mockup {
-    position: absolute;
-    top: 197px;
-    left: 35px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 128px;
-    height: 11px;
 }
 
 .url-text-mockup1 {
-    position: absolute;
-    top: 219px;
-    left: 59px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 80px;
-    height: 11px;
 }
 
 .url-ui-element-4 {
-    position: absolute;
-    top: 151px;
-    left: 371px;
     border-radius: 12px;
     background-color: #f9f9f9;
-    width: 198px;
-    height: 258px;
 }
 
 .url-bg2 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
-    width: 432px;
-    height: 154px;
 }
 
-.url-checkmark-icon {
-    position: absolute;
-    top: 28px;
-    left: 31px;
-    width: 64px;
-    height: 64px;
-}
+.url-checkmark-icon {}
 
-.url-headline {
-    position: absolute;
-    top: 28px;
-    left: 114px;
-}
+.url-headline {}
 
 .url-text-mockup2 {
-    position: absolute;
-    top: 74px;
-    left: 121px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 273px;
-    height: 11px;
 }
 
 .url-text-mockup3 {
-    position: absolute;
-    top: 97px;
-    left: 121px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 182px;
-    height: 11px;
 }
 
 .url-ui-element-3 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     box-shadow: 0px 2px 40px rgba(189, 189, 189, 0.11);
     border-radius: 12px;
     background-color: #f9f9f9;
-    width: 432px;
-    height: 154px;
 }
 
 .url-ui-element-3-wrapper {
-    position: absolute;
-    top: 437px;
-    left: 175px;
-    width: 432px;
-    height: 154px;
     font-size: 24px;
 }
 
 .url-bg3 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     box-shadow: 0px 4px 40px rgba(138, 138, 138, 0.04);
     border-radius: 12px;
     background-color: #fff;
-    width: 285px;
-    height: 388px;
 }
 
 .url-fake-button {
-    position: absolute;
-    top: 322px;
-    left: 31px;
     border-radius: 8px;
     background-color: rgba(137, 118, 253, 0.34);
-    width: 229px;
-    height: 37px;
 }
 
-.url-checkmark-icon1 {
-    position: absolute;
-    top: 233px;
-    left: 31px;
-    width: 19px;
-    height: 19px;
-}
+.url-checkmark-icon1 {}
 
-.url-checkmark-icon2 {
-    position: absolute;
-    top: 202px;
-    left: 31px;
-    width: 19px;
-    height: 19px;
-}
+.url-checkmark-icon2 {}
 
-.url-checkmark-icon3 {
-    position: absolute;
-    top: 264px;
-    left: 31px;
-    width: 19px;
-    height: 19px;
-}
+.url-checkmark-icon3 {}
 
 .url-text-mockup4 {
-    position: absolute;
-    top: 130px;
-    left: 31px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 156px;
-    height: 11px;
 }
 
 .url-text-mockup5 {
-    position: absolute;
-    top: 153px;
-    left: 31px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 182px;
-    height: 11px;
 }
 
 .url-text-mockup6 {
-    position: absolute;
-    top: 237px;
-    left: 64px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 80px;
-    height: 11px;
 }
 
 .url-text-mockup7 {
-    position: absolute;
-    top: 268px;
-    left: 64px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 133px;
-    height: 11px;
 }
 
 .url-text-mockup8 {
-    position: absolute;
-    top: 206px;
-    left: 64px;
     border-radius: 12px;
     background-color: rgba(32, 72, 79, 0.1);
-    width: 80px;
-    height: 11px;
 }
 
-.url-subheader {
-    position: absolute;
-    top: 86px;
-    left: 31px;
-}
+.url-subheader {}
 
 .url-heading1 {
-    position: absolute;
-    top: 24px;
-    left: 31px;
     font-size: 24px;
 }
 
 .url-ui-element-5 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     border-radius: 12px;
     background-color: #f9f9f9;
-    width: 285px;
-    height: 388px;
 }
 
-.url-bg-parent {
-    position: absolute;
-    top: 244px;
-    left: 224px;
-    width: 607px;
-    height: 591px;
-}
+.url-bg-parent {}
 
 .url-headline1 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     font-size: 60px;
     line-height: 120%;
     display: inline-block;
-    width: 873px;
+}
+
+@media (max-width: 1600px) {
+    .url-headline1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .url-headline1 {
+        font-size: 40px;
+    }
+}
+
+/* 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .url-headline1 {
+        font-size: 35px;
+    }
 }
 
 .url-div {
@@ -285,9 +156,6 @@
 }
 
 .url-cta {
-    position: absolute;
-    top: calc(50% - 29px);
-    right: 0px;
     border-radius: 0px 8px 8px 0px;
     background-color: #8976fd;
     overflow: hidden;
@@ -296,80 +164,84 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 16px 36px 15px;
-    height: 55px;
     cursor: pointer;
 }
 
 .url-email-text-input {
-    position: absolute;
-    top: 393px;
-    left: 107px;
     border-radius: 8px;
     background-color: #fff;
     border: 1px solid #8976fd;
     box-sizing: border-box;
-    width: 457px;
-    height: 58px;
     overflow: hidden;
     color: #fff;
+    display: flex;
+    height: 60px;
 }
 
 .url-text-input {
     border-radius: 8px;
     background-color: #fff;
-    width: 310px;
-    height: 58px;
+    width: 100%;
+    /* height: 58px; */
     overflow: hidden;
     padding-left: 10px;
     outline: none;
     border: none;
 }
 
+.url-img-frame {
+    width: 100%;
+}
+
+.url-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
 .url-descripton {
-    position: absolute;
-    top: 278px;
-    left: 0px;
     line-height: 150%;
     display: inline-block;
-    width: 654px;
 }
 
 .url-headline-parent {
-    position: absolute;
-    top: 380px;
-    left: 908px;
-    width: 873px;
-    height: 451px;
     color: #072125;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.url-container {
+    width: 100%;
+    height: auto;
 }
 
 .url-rectangle-parent {
-    width: 100%;
-    height: 930px;
+    width: 80%;
+    height: auto;
     color: #8976fd;
     font-family: 'Plus Jakarta Sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    gap: 50px;
+    position: relative;
 }
 
 .url-b {
-    width: 120px;
-    position: absolute;
     margin: 0 !important;
-    top: 12px;
-    left: 6px;
     line-height: 150%;
     display: inline-block;
     z-index: 0;
 }
 
 .url-wrapper {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     border-radius: 15px;
     border: 1px solid #8976fd;
     box-sizing: border-box;
-    width: 132px;
-    height: 51px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -377,95 +249,40 @@
     padding: 16px 32px;
 }
 
-.url-loginsignup {
-    position: absolute;
-    top: 0px;
-    left: 101px;
-    width: 132px;
-    height: 51px;
-}
+.url-loginsignup {}
 
 .url-b1 {
-    position: absolute;
-    top: 12px;
-    left: 0px;
     line-height: 150%;
     display: inline-block;
     text-align: left;
-    width: 66px;
-    height: 27px;
 }
 
 .url-loginsignup-parent {
-    position: absolute;
-    top: 68px;
-    left: 1570px;
-    width: 233px;
-    height: 51px;
     text-align: center;
 }
 
-.url-logo-icon {
-    position: absolute;
-    top: 1px;
-    left: 67px;
-    width: 109px;
-    height: 56px;
-}
+.url-logo-icon {}
 
 .url-icon {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 48.url-1px;
-    height: 48.url-3px;
     object-fit: cover;
 }
 
 .url-group-item {
-    position: absolute;
-    top: 1px;
-    left: 1px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0);
     border: 1px solid #8976fd;
     box-sizing: border-box;
-    width: 48px;
-    height: 48px;
 }
 
-.url-group-wrapper {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 49px;
-    height: 49px;
-}
+.url-group-wrapper {}
 
-.url-logo-parent {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 176px;
-    height: 57px;
-}
+.url-logo-parent {}
 
-.url-url-inner {
-    position: absolute;
-    top: 73px;
-    left: 48px;
-    width: 176px;
-    height: 57px;
-}
+.url-url-inner {}
 
 .url-b2 {
-    position: absolute;
-    top: 1018px;
-    left: 960px;
     line-height: 150%;
     display: inline-block;
-    width: 89px;
-    height: 27px;
 }
 
 .url-p {
@@ -473,21 +290,14 @@
 }
 
 .url-url- {
-    position: absolute;
-    top: -507px;
-    left: -618px;
     font-size: 96px;
     display: inline-block;
     font-family: Inter;
     color: #000;
-    width: 389px;
-    height: 240px;
 }
 
 .url-url {
-    width: 100%;
     position: relative;
-    height: 1080px;
     text-align: left;
     font-size: 18px;
     color: #7562e0;

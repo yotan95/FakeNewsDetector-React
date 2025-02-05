@@ -1,10 +1,19 @@
 .board-div {
     background-color: #f9f9f9;
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
+.board-container {
+    width: 100%;
+    height: auto;
+    background-color: #f9f9f9;
+}
+
+/* 
 .board-frame {
     display: flex;
     width: 1920px;
@@ -15,7 +24,7 @@
     position: absolute;
     top: 0;
     left: 0;
-}
+} */
 
 .board-element {
     position: relative;
@@ -95,8 +104,8 @@
 .board-text-wrapper-3 {
     position: absolute;
     width: 66px;
-    top: 12px;
-    left: 0;
+    /* top: 12px;
+    left: 0; */
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #7562e0;
@@ -109,14 +118,13 @@
 .board-frame-2 {
     display: flex;
     flex-direction: column;
-    width: 1283px;
-    align-items: flex-start;
-    gap: 61px;
-    position: absolute;
-    left: 318px;
+    /* align-items: flex-start; */
+    /* justify-self: center; */
+    gap: 10px;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    width: 80%;
 }
 
 .board-frame-3 {
@@ -182,18 +190,20 @@
 
 .board-frame-wrapper {
     position: relative;
-    width: 1283px;
-    height: 574px;
+    /* width: 1283px; */
+    /* height: 574px; */
 }
 
 .board-frame-4 {
     position: relative;
-    height: 574px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .board-num {
     display: flex;
-    width: 70px;
+    width: 10%;
     height: 40px;
     align-items: center;
     justify-content: center;
@@ -217,11 +227,12 @@
 
 .board-category {
     display: flex;
-    width: 200px;
+    width: 15%;
     height: 40px;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    min-width: 132px;
     position: relative;
 }
 
@@ -240,7 +251,7 @@
 
 .board-title {
     display: flex;
-    width: 553px;
+    width: 35%;
     height: 40px;
     align-items: center;
     gap: 10px;
@@ -263,7 +274,7 @@
 
 .board-user {
     display: flex;
-    width: 124px;
+    width: 15%;
     height: 40px;
     align-items: center;
     justify-content: center;
@@ -288,7 +299,7 @@
 
 .board-date {
     display: flex;
-    width: 144px;
+    width: 10%;
     height: 40px;
     align-items: center;
     justify-content: center;
@@ -314,7 +325,7 @@
 
 .board-state {
     display: flex;
-    width: 111px;
+    width: 10%;
     height: 26px;
     align-items: center;
     justify-content: center;
@@ -327,7 +338,7 @@
 
 .board-state-comment {
     display: flex;
-    width: 111px;
+    width: 10%;
     height: 26px;
     align-items: center;
     justify-content: center;
@@ -379,9 +390,9 @@
 
 .board-frame-11 {
     display: flex;
-    width: 1283px;
+    width: 100%;
     align-items: center;
-    gap: 24px;
+    gap: 1%;
     top: 52px;
     left: -1px;
     cursor: pointer;
@@ -405,7 +416,7 @@
 
 .board-state-2 {
     display: flex;
-    width: 111px;
+    width: 10%;
     height: 26px;
     align-items: center;
     justify-content: center;
@@ -479,8 +490,12 @@
     display: flex;
     align-items: center;
     justify-self: center;
+    justify-content: center;
+    width: 100%;
     gap: 5px;
     margin-top: 40px;
+    padding-bottom: 40px;
+    /* align-self: center; */
 }
 
 .pagination-button {
