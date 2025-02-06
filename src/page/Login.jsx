@@ -4,12 +4,15 @@ import { loginApi } from '../api/member.api';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { EmailFindModal } from '../component/modal/EmailFindModal';
+import { PasswordFindModal } from '../component/modal/PasswordFindModal';
 export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
-
+    const [emailModalOpen, setEmailmodalOpen] = useState(false);
+    const [passwordModalOpen, setPasswordModalOpen] = useState(false);
     const handleLogin = (e) => {
         e.preventDefault();
         const loginData = {
@@ -46,9 +49,15 @@ export function Login() {
                         <label htmlFor="password">비밀번호</label>
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="비밀번호를 입력하세요" />
                     </div>
+                    <div className="login-find-frame">
+                        <p onClick={() => setEmailmodalOpen(true)}>아이디 찾기</p>
+                        <p onClick={() => setPasswordModalOpen(true)}>비밀번호 찾기</p>
+                    </div>
                     <button type="submit" className="login-login-button">로그인</button>
                 </form>
             </div>
+            <EmailFindModal isOpen={emailModalOpen} setIsOpen={setEmailmodalOpen} />
+            <PasswordFindModal isOpen={passwordModalOpen} setIsOpen={setPasswordModalOpen} />
         </div>
     );
 }

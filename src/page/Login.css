@@ -202,3 +202,15 @@
 .login-element-5 {
     object-fit: cover;
 }
+
+.login-find-frame {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-find-frame p {
+    font-family: "Nanum Gothic", Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}

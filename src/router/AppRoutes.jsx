@@ -13,7 +13,7 @@ import { Home } from '../page/Home';
 import { useRoutes } from 'react-router-dom';
 import { MainLayout } from "../page/MainLayout";
 import { Header } from "../component/Header";
-
+import { MyPage } from '../page/MyPage'
 const AppRoutes = () => {
     const routes = useRoutes([
         {

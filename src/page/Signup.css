@@ -66,7 +66,7 @@
 }
 
 .signup-form-group-code input {
-    width: 30%;
+    width: 70%;
     text-align: center;
 }
 
@@ -154,7 +154,7 @@
     /* 국가 선택 박스의 너비 설정 */
 }
 
-input[type="tel"] {
+.signup-country-selector input[type="tel"] {
     padding: 12px;
     border: 1px solid #e0e0e0;
     border-radius: 0 8px 8px 0;
