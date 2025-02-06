@@ -67,7 +67,7 @@ export const EmailFindModal = ({ isOpen, setIsOpen }) => {
                 className="input-field"
             />
             <div className="modal-form-group">
-                <label>휴대전화 번호</label>
+                {/* <label>휴대전화 번호</label> */}
                 <div className="modal-phone-wrapper">
                     <div className="modal-country-selector">
                         <select id="country-code" required onChange={(e) => setCountryCode(e.target.value)}>
