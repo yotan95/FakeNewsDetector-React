@@ -62,8 +62,7 @@ export const BoardDetail = () => {
     }, []);
 
     const handleDownload = async () => {
-        // const response = await fetch(`http://localhost:8080/download?file=${boardDetail.imageUrl}`);
-        const response = await downloadImage(boardDetail.imageUrl);
+        const response = await fetch(`http://localhost:8080/download?file=${boardDetail.imageUrl}`);
 
         // 이미 Blob 객체이므로 변환할 필요 없음
         const downloadUrl = window.URL.createObjectURL(response.data);

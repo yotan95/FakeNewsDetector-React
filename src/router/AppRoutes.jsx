@@ -6,7 +6,7 @@ import { Pricing } from '../page/Pricing';
 import { Board } from '../page/Board';
 import { BoardWrite } from '../page/BoardWrite';
 import { BoardDetail } from '../page/BoardDetail';
-import { MyPage } from '../page/MyPage';
+import { MyPage2 } from '../page/MyPage2';
 import { Login } from '../page/Login';
 import { Signup } from '../page/Signup';
 import { Home } from '../page/Home';
@@ -33,6 +33,7 @@ const AppRoutes = () => {
                         { path: "/mypage", element: <MyPage /> },
                         { path: "/history", element: <History /> },
                         { path: "/url", element: <UrlPage /> },
+                        { path: "/mypage2", element: <MyPage2 /> },
                     ],
                 },
             ],

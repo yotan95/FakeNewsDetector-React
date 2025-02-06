@@ -1,0 +1,134 @@
+/* 전체 페이지 컨테이너 */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* 사이드바 스타일 */
+  .sidebar {
+    width: 10%;
+    background-color: #f3f4f6;
+    padding: 2%;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+  }
+  
+  /* 메뉴 아이템 스타일 */
+  .menu-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    color: #374151;
+  }
+  
+  .menu-item:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .menu-item.active {
+    background-color: #4F46E5;
+    color: white;
+  }
+  
+  /* 메인 컨텐츠 영역 */
+  .main-content {
+    flex: 2;
+    margin-left: 17%;
+    padding: 20px;
+  }
+  
+  /* 페이지 제목 */
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* 카드 공통 스타일 */
+  .info-card, .chart-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* 카드 제목 */
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* 정보 그리드 */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* 정보 행 스타일 */
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .info-label {
+    color: #666;
+  }
+  
+  /* 차트 관련 스타일 */
+  .chart-subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .chart-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow-x: auto;
+  }
+  
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 10px;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding: 10px;
+    }
+  
+    .page-container {
+      flex-direction: column;
+    }
+  
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .chart-wrapper {
+      height: auto;
+    }
+  }
+  
+  /* 작은 화면에서의 차트 크기 조정 */
+  @media (max-width: 900px) {
+    .recharts-wrapper {
+      width: 100% !important;
+      height: auto !important;
+    }
+    
+    .recharts-surface {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }

@@ -33,11 +33,9 @@ export const History = () => {
 
     const handleClick = (hist) => {
         if (selectedHistory?.title === hist.title) {
-            // ✅ 같은 항목 클릭 시 선택 해제
             setSelectedHistory(null);
             setIsColumn(false);
         } else {
-            // ✅ 새로운 항목 클릭 시 선택
             setSelectedHistory(hist);
             setIsColumn(true);
         }
@@ -55,13 +53,15 @@ export const History = () => {
     }, [page])
     return (
         <div className="history-container-container">
+            <div className="history-index">영상 분석 기록</div>
+
             <div className="history-container">
                 <div ref={historyRef} className={`history-frame ${isColumn ? "column-view" : ""}`}>
                     {history.map((hist, index) => (
                         <HistoryComponent
                             key={index}
                             history={hist}
-                            isActive={selectedHistory?.title === hist.title} // ✅ 선택 여부 전달
+                            isActive={selectedHistory?.title === hist.title}
                             onClick={() => handleClick(hist)}
                             data-title={hist.title}
                         />

@@ -13,6 +13,33 @@
     position: relative;
     flex: 0 0 auto;
 } */
+.main-frame {
+    display: grid; /* 혹은 display: grid */
+    flex-direction: column; /* 모바일 기준 세로 정렬 */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* 화면 크기가 768px 이상일 때 (태블릿, 데스크탑) */
+  @media (min-width: 768px) {
+    .main-frame {
+      flex-direction: row; /* 가로 정렬 */
+      justify-content: space-around;
+    }
+  }
+.history-index {
+    padding-left: 5%;
+    color: #000;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .history-container {
     display: flex;
