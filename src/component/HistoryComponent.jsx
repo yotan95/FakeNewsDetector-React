@@ -3,7 +3,7 @@ import './HistoryComponent.css'
 export const HistoryComponent = ({ history, onClick, isActive }) => {
     return (
         <div className="history-comp-container">
-            <div className={`history-comp-frame ${isActive ? "active" : ""}`} onClick={onClick} data-title={history.title}>
+            <div className={`history-comp-frame ${isActive ? "active" : ""}`} onClick={onClick} data-title={history.id}>
                 <div className="history-comp-element-div">
                     <img className="history-comp-element" src={`https://i.ytimg.com/vi/${history.url.match(/[?&]v=([^&]+)/)[1]}/hq720.jpg`} />
                 </div>

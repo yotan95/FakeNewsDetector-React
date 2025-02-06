@@ -22,7 +22,7 @@ export const History = () => {
         // historyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         if (selectedHistory && historyRef.current) {
 
-            const selectedElement = historyRef.current.querySelector(`[data-title="${selectedHistory.title}"]`);
+            const selectedElement = historyRef.current.querySelector(`[data-title="${selectedHistory.id}"]`);
             console.log(selectedElement);
             if (selectedElement) {
                 console.log(selectedElement);
@@ -32,7 +32,7 @@ export const History = () => {
     }, [selectedHistory]);
 
     const handleClick = (hist) => {
-        if (selectedHistory?.title === hist.title) {
+        if (selectedHistory?.id === hist.id) {
             setSelectedHistory(null);
             setIsColumn(false);
         } else {
@@ -61,9 +61,9 @@ export const History = () => {
                         <HistoryComponent
                             key={index}
                             history={hist}
-                            isActive={selectedHistory?.title === hist.title}
+                            isActive={selectedHistory?.id === hist.id}
                             onClick={() => handleClick(hist)}
-                            data-title={hist.title}
+                            data-title={hist.id}
                         />
                     ))}
                 </div>

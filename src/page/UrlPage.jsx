@@ -11,14 +11,22 @@ export function UrlPage() {
     const { member } = useAuth();
     const navigation = useNavigate();
     const [isLoading, setIsLoading] = useState(false);
-    const handleSubmit = () => {
+    const [message, setMessage] = useState('');
+    const [estimatedTime, setEstimatedTime] = useState(null); // 초기 예상 시간 (초 단위)
+
+    const handleSubmit = async () => {
         if (member === null) {
             toast.error('로그인 필요');
             navigation('/login');
             return
         }
         if (!url.trim()) return; // url이 빈 문자열 또는 공백만 있으면 요청하지 않음
+        const youtubeId = extractYouTubeID(url);
+        const estimatedSeconds = await getVideoDuration(youtubeId); // 예상 시간(초)
         setIsLoading(true);
+        if (estimatedSeconds !== null) {
+            setEstimatedTime(estimatedSeconds);
+        }
         const response = getAnalysis(url);
         response.then((res) => {
             if (res.data.status === 200) {
@@ -30,7 +38,41 @@ export function UrlPage() {
             }
         })
     }
+    const API_KEY = "AIzaSyCfcL1x3RImKMX72FuP6tXm1bnGoN9PNtQ";
 
+    const getVideoDuration = async (VIDEO_ID) => {
+        try {
+            const response = await fetch(
+                `https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&part=contentDetails&key=${API_KEY}`
+            );
+            const data = await response.json();
+
+            if (data.items.length > 0) {
+                const duration = data.items[0].contentDetails.duration;
+                return parseYouTubeDuration(duration);
+            } else {
+                console.log("동영상을 찾을 수 없습니다.");
+                return null;
+            }
+        } catch (error) {
+            console.error("오류 발생:", error);
+            return null;
+        }
+    };
+
+    const parseYouTubeDuration = (duration) => {
+        const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+        const hours = parseInt((match[1] || "0H").replace("H", ""), 10) || 0;
+        const minutes = parseInt((match[2] || "0M").replace("M", ""), 10) || 0;
+        const seconds = parseInt((match[3] || "0S").replace("S", ""), 10) || 0;
+
+        return Math.floor((hours * 3600 + minutes * 60 + seconds) / 2);
+    };
+
+    const extractYouTubeID = (url) => {
+        const match = url.match(/[?&]v=([^&]+)/);
+        return match ? match[1] : null;
+    };
     return (
         <div className="url-container">
             <div className="url-rectangle-parent">
@@ -48,7 +90,7 @@ export function UrlPage() {
                     <div className="url-descripton">아래 입력란에 유튜브 동영상의 URL을 복사하여 붙여넣고 '분석하기' 버튼을 눌러주세요. 분석 결과는 콘텐츠 요약, 의심스러운 정보 여부, 관련 뉴스 기사 등의 형태로 제공됩니다</div>
                 </div>
             </div>
-            {isLoading && <Spinner />}
+            {isLoading && <Spinner message={message} initialTime={estimatedTime} />}
         </div>
     );
 }
