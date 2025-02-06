@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import './PrivacyConsentModal.css'
-// Modal.setAppElement("#root"); // 접근성 문제 해결을 위해 루트 요소 설정
+Modal.setAppElement("#root"); // 접근성 문제 해결을 위해 루트 요소 설정
 
 const PrivacyConsentModal = ({ isOpen, onClose, onAgree }) => {
     return (

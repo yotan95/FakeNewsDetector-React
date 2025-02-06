@@ -38,6 +38,47 @@
     gap: 8px;
 }
 
+.signup-form-group-email {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.signup-form-group-email input {
+    width: 70%;
+}
+
+.signup-form-group-email button {
+    width: 30%;
+    border-radius: 10px;
+    background-color: #8976fd;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.signup-form-group-code {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.signup-form-group-code input {
+    width: 30%;
+    text-align: center;
+}
+
+.signup-form-group-code button {
+    width: 30%;
+    border-radius: 10px;
+    background-color: #8976fd;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .signup-form-group label {
     font-family: "Nanum Gothic", Helvetica;
     font-size: 14px;

@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PrivacyConsentModal from '../component/modal/PrivacyConsentModal';
 import TermsModal from '../component/modal/TermsModal';
+import { sendMail } from '../api/mail.api';
 export function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -18,6 +19,20 @@ export function Signup() {
     const [isPasswordMatch, setIsPasswordMatch] = useState(true); // 비밀번호 일치 여부 상태
     const [privacyModelIsOpen, setPrivacyModelIsOpen] = useState(false);
     const [termsModelIsOpen, setTermsModelIsOpen] = useState(false);
+    const [code, setCode] = useState(""); // 인증 코드 입력값
+    const [timer, setTimer] = useState(0); // 타이머 (초)
+    const [isCodeSent, setIsCodeSent] = useState(false); // 인증 코드 발송 여부
+    const [receivedCode, setReceivedCode] = useState('');
+    const [isMailCodeValid, setIsMailCodeValid] = useState(false);
+    // 타이머 감소 로직
+    useEffect(() => {
+        if (timer > 0) {
+            const countdown = setInterval(() => {
+                setTimer((prev) => prev - 1);
+            }, 1000);
+            return () => clearInterval(countdown);
+        }
+    }, [timer]);
     const navigate = useNavigate();
     // 비밀번호 유효성 검사 함수
     const checkPasswordStrength = (password) => {
@@ -26,6 +41,46 @@ export function Signup() {
 
         return minLengthValid && specialCharValid;
     };
+    // 이메일 인증 코드 요청 핸들러
+    const handleSendCode = (e) => {
+        e.preventDefault();
+        const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
+        if (email.toLowerCase().includes("admin")) {
+            toast.error("사용할 수 없는 이메일입니다.");
+            return;
+        }
+        if (!emailRegex.test(email)) {
+            toast.error("사용할 수 없는 이메일입니다.");
+            return;
+        }
+        const sendMailData = {
+            email: email
+        }
+        const response = sendMail(sendMailData);
+        response.then((res) => {
+            if (res.data.status === 200) {
+                toast.success(res.data.message);
+                setReceivedCode(res.data.data);
+                setIsCodeSent(true);
+                setTimer(180); // 3분 설정 (180초)
+            } else {
+                toast.error(res.data.message);
+            }
+        })
+    };
+    const handleValidEmailCode = () => {
+        if (code === receivedCode) {
+            toast.success("인증 성공");
+            setIsMailCodeValid(true);
+            return;
+        } else {
+            toast.error("인증 실패");
+            setIsMailCodeValid(false);
+            return;
+        }
+    }
+
     const handleTermsAgree = () => {
         setInfoAgmt(true);
         setTermsModelIsOpen(false);
@@ -67,6 +122,8 @@ export function Signup() {
 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
+        const emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
+
         // 폼 유효성 검사 추가 (비밀번호 확인, 동의 체크 등)
         if (!isPasswordMatch) {
             toast.error("비밀번호가 일치하지 않습니다.");
@@ -81,18 +138,29 @@ export function Signup() {
             return;
         }
         if (email.toLowerCase().includes("admin")) {
-            toast.error("사용할 수 없는 이메일입니다.")
+            toast.error("사용할 수 없는 이메일입니다.");
+            return;
+        }
+        if (!emailRegex.test(email)) {
+            toast.error("사용할 수 없는 이메일입니다.");
+            return;
+        }
+        if (!isMailCodeValid) {
+            toast.error("이메일 인증이 필요합니다.")
+            return;
         }
 
         // 요청 보낼 데이터 객체 생성
         const userData = {
             email,
             password,
+            confirmPassword,
             phone: `${countryCode} ${phone}`,
             name,
             nickName,
             svcAgmt,
             infoAgmt,
+            receivedCode
         };
 
         const response = signupApi(userData);
@@ -118,7 +186,18 @@ export function Signup() {
                 <form className="signup-signup-form" onSubmit={handleFormSubmit}>
                     <div className="signup-form-group">
                         <label htmlFor="email">이메일</label>
-                        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일을 입력하세요" />
+                        <div className="signup-form-group-email">
+                            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="이메일을 입력하세요" disabled={isMailCodeValid} />
+                            <button onClick={(e) => handleSendCode(e)} disabled={isMailCodeValid}>전송 요청</button>
+                        </div>
+                    </div>
+                    <div className="signup-form-group">
+                        <label htmlFor="email">인증코드</label>
+                        <div className="signup-form-group-code">
+                            <input type="code" id="code" value={code} maxLength={6} onChange={(e) => setCode(e.target.value)} required placeholder="인증코드를 입력하세요" disabled={isMailCodeValid} />
+                            <button onClick={handleValidEmailCode} disabled={isMailCodeValid}>인증</button>
+
+                        </div>
                     </div>
                     <div className="signup-form-group">
                         <label htmlFor="password">비밀번호</label>

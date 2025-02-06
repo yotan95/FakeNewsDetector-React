@@ -11,7 +11,6 @@ import { Login } from '../page/Login';
 import { Signup } from '../page/Signup';
 import { Home } from '../page/Home';
 import { useRoutes } from 'react-router-dom';
-import { Template } from "../page/dashboard/Template";
 import { MainLayout } from "../page/MainLayout";
 import { Header } from "../component/Header";
 
@@ -38,10 +37,6 @@ const AppRoutes = () => {
                 },
             ],
 
-        },
-        {
-            path: "/dashboard",
-            element: <Template />, // Header 없는 페이지
         },
 
         // { path: "/", element: <Home /> },
