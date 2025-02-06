@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 export const History = () => {
     const [selectedHistory, setSelectedHistory] = useState(null);
     const [history, setHistory] = useState([]);
-    const [isColumn, setIsColumn] = useState(false); // ✅ 클릭 여부 상태 추가
+    const [isColumn, setIsColumn] = useState(false); //  클릭 여부 상태 추가
     const historyRef = useRef(null);
     const location = useLocation();
     const query = new URLSearchParams(location.search);
