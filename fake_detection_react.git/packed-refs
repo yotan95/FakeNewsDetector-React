@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+150e3d58dbf128a0fb38dc34a9c4b9f79151ca3c refs/heads/jongjin
+a29b15529a0b9644804fac8bc8b4b856bc0e262d refs/heads/jongjin-2
+41796f945c6e0faea8ab7be662f829b28f9b6f36 refs/heads/main
+a7b0db3ee35e86334f99e7a485e1de1b8e87e271 refs/heads/yotan
+bf066366399f28cf6da563485d1df3bb2be8e957 refs/merge-requests/1/head
+a9ad9b40cbcb99564072fa7388c7dfca7ac8a2cf refs/merge-requests/1/merge
+f7a516be45ba169ba0e630ac4cdc08280314a2d9 refs/merge-requests/2/head
+4573d5c5d8b11eaaa9095fb48ce4cbfc5e09fe46 refs/merge-requests/2/merge
+9578374100ea46fd3579105c418811dd015b5a45 refs/merge-requests/3/head
+0fd0094803633c47f4431403817f2b2c4c6d9ed1 refs/merge-requests/3/merge
