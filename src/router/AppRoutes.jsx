@@ -11,25 +11,52 @@ import { Login } from '../page/Login';
 import { Signup } from '../page/Signup';
 import { Home } from '../page/Home';
 import { useRoutes } from 'react-router-dom';
-
+import { MainLayout } from "../page/MainLayout";
+import { Header } from "../component/Header";
+import { MyPage } from '../page/MyPage'
 const AppRoutes = () => {
     const routes = useRoutes([
-        { path: "/", element: <Home /> },
-        { path: "/login", element: <Login /> },
-        { path: "/signup", element: <Signup /> },
-        { path: "/board", element: <Board /> },
-        { path: "/board/:id", element: <BoardDetail /> },
-        { path: "/pricing", element: <Pricing /> },
         {
-            element: <PrivateRoute />, // PrivateRoute를 감싸서 보호된 경로 관리
+            element: <MainLayout />,  // 기본 레이아웃 (Header 포함)
             children: [
-                { path: "/board/write", element: <BoardWrite /> },
-                { path: "/board/modify/:id", element: <BoardModify /> },
-                { path: "/mypage2", element: <MyPage2 /> },
-                { path: "/history", element: <History /> },
-                { path: "/url", element: <UrlPage /> },
+                { path: "/", element: <Home /> },
+                { path: "/login", element: <Login /> },
+                { path: "/signup", element: <Signup /> },
+                { path: "/board", element: <Board /> },
+                { path: "/board/:id", element: <BoardDetail /> },
+                { path: "/pricing", element: <Pricing /> },
+                {
+                    element: <PrivateRoute />, // 보호된 경로 관리
+                    children: [
+                        { path: "/board/write", element: <BoardWrite /> },
+                        { path: "/board/modify/:id", element: <BoardModify /> },
+                        { path: "/mypage", element: <MyPage /> },
+                        { path: "/history", element: <History /> },
+                        { path: "/url", element: <UrlPage /> },
+                        { path: "/mypage2", element: <MyPage2 /> },
+                    ],
+                },
             ],
+
         },
+
+        // { path: "/", element: <Home /> },
+        // { path: "/login", element: <Login /> },
+        // { path: "/signup", element: <Signup /> },
+        // { path: "/board", element: <Board /> },
+        // { path: "/board/:id", element: <BoardDetail /> },
+        // { path: "/pricing", element: <Pricing /> },
+        // {
+        //     element: <PrivateRoute />, // PrivateRoute를 감싸서 보호된 경로 관리
+        //     children: [
+        //         { path: "/board/write", element: <BoardWrite /> },
+        //         { path: "/board/modify/:id", element: <BoardModify /> },
+        //         { path: "/mypage", element: <MyPage /> },
+        //         { path: "/history", element: <History /> },
+        //         { path: "/url", element: <UrlPage /> },
+        //         { path: "/dashboard", element: <Template /> }
+        //     ],
+        // },
     ]);
 
     return routes;

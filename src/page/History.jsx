@@ -22,7 +22,7 @@ export const History = () => {
         // historyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         if (selectedHistory && historyRef.current) {
 
-            const selectedElement = historyRef.current.querySelector(`[data-title="${selectedHistory.title}"]`);
+            const selectedElement = historyRef.current.querySelector(`[data-title="${selectedHistory.id}"]`);
             console.log(selectedElement);
             if (selectedElement) {
                 console.log(selectedElement);
@@ -32,7 +32,7 @@ export const History = () => {
     }, [selectedHistory]);
 
     const handleClick = (hist) => {
-        if (selectedHistory?.title === hist.title) {
+        if (selectedHistory?.id === hist.id) {
             setSelectedHistory(null);
             setIsColumn(false);
         } else {
@@ -52,17 +52,18 @@ export const History = () => {
         })
     }, [page])
     return (
-        <div className="main-frame">
-            <div className="history-index">영상 분석 기록 > </div>
+        <div className="history-container-container">
+            <div className="history-index">영상 분석 기록</div>
+
             <div className="history-container">
                 <div ref={historyRef} className={`history-frame ${isColumn ? "column-view" : ""}`}>
                     {history.map((hist, index) => (
                         <HistoryComponent
                             key={index}
                             history={hist}
-                            isActive={selectedHistory?.title === hist.title}
+                            isActive={selectedHistory?.id === hist.id}
                             onClick={() => handleClick(hist)}
-                            data-title={hist.title}
+                            data-title={hist.id}
                         />
                     ))}
                 </div>

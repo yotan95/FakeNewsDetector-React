@@ -5,7 +5,7 @@
     align-items: center;
     height: fit-content;
     position: relative;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     background-color: #f9f9f9;
 }
 
@@ -20,7 +20,7 @@
 .bd-frame {
     display: flex;
     flex-direction: column;
-    width: 853px;
+    width: 60%;
     height: fit-content;
     align-items: flex-end;
     justify-content: center;
@@ -263,7 +263,7 @@
 
 .bd-line-2 {
     position: relative;
-    width: 701px;
+    width: 100%;
     height: 1px;
     object-fit: cover;
 }

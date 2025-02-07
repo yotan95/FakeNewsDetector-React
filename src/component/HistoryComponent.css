@@ -1,14 +1,15 @@
 .history-comp-frame {
     position: relative;
-    width: 465px;
-    height: 245px;
+    /* width: 100%; */
+    height: 200px;
+    /* padding: 10px; */
     background-color: #ffffff;
     border-radius: 16.56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 20px;
+    /* gap: 10px; */
+    /* padding: 20px; */
     /* flex-direction: column; */
     /* box-shadow: #000000; */
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -23,7 +24,7 @@
 
 .history-comp-frame .history-comp-group {
     position: relative;
-    width: 216px;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -32,7 +33,7 @@
 .history-comp-frame .history-comp-div {
     display: flex;
     flex-direction: column;
-    width: 216px;
+    width: 100%;
     align-items: flex-start;
     gap: 16px;
     position: relative;
@@ -43,6 +44,7 @@
     position: relative;
     width: 100%;
     height: 28.07px;
+    text-overflow: ellipsis;
 }
 
 .history-comp-frame .history-comp-text-wrapper {
@@ -64,11 +66,10 @@
 .history-comp-frame .history-comp-div-2 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
-    align-self: stretch;
+    /* align-self: stretch; */
     width: 100%;
-    flex: 0 0 auto;
     height: fit-content;
 }
 
@@ -80,7 +81,7 @@
 
 .history-comp-frame .history-comp-p {
     position: relative;
-    width: 202px;
+    width: 100%;
     height: 100%;
     /* margin-top: -1.05px; */
     font-family: "Poppins-Medium", Helvetica;
@@ -88,16 +89,17 @@
     color: #000000;
     font-size: 11.7px;
     letter-spacing: 0;
-    line-height: 18.4px;
+    /* line-height: 18.4px; */
     white-space: nowrap;
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .history-comp-frame .history-comp-div-3 {
     display: flex;
     flex-direction: column;
-    width: 132.27px;
+    width: 100%;
     align-items: flex-start;
     gap: 8px;
     position: relative;
@@ -114,7 +116,7 @@
 
 .history-comp-frame .history-comp-text-wrapper-2 {
     position: relative;
-    width: 41.83px;
+    width: 100%;
     height: 15.16px;
     margin-top: -1.00px;
     font-family: "Poppins-Regular", Helvetica;
@@ -128,7 +130,7 @@
 
 .history-comp-frame .history-comp-text-wrapper-3 {
     position: relative;
-    width: 70.12px;
+    width: 100%;
     height: 14.65px;
     margin-top: -1.00px;
     font-family: "Poppins-Regular", Helvetica;
@@ -152,9 +154,9 @@
 
 .history-comp-frame .history-comp-text-wrapper-4 {
     position: relative;
-    width: 108.85px;
+    width: 100%;
     height: 14.65px;
-    margin-top: -1.00px;
+    /* margin-top: -1.00px; */
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #777777;
@@ -166,8 +168,21 @@
 
 .history-comp-frame .history-comp-element {
     position: relative;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     object-fit: cover;
     border-radius: 10px;
+
+}
+
+.history-comp-element-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.history-comp-container {
+    width: 100%;
+    /* max-width: 370px; */
+    /* padding: 10px; */
 }

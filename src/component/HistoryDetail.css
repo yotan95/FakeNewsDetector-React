@@ -1,9 +1,9 @@
 .history-detail-frame {
     display: flex;
     flex-direction: column;
-    height: 872px;
+    height: 85%;
     align-items: flex-start;
-    width: 1172px;
+    /* width: 1172px; */
     gap: 48px;
     position: relative;
     overflow-y: auto;
@@ -12,6 +12,7 @@
     scrollbar-width: none;
     /* Firefox에서 스크롤바 숨기기 */
     padding-right: 10px;
+    width: 100%;
 }
 
 .history-detail-div {
@@ -22,11 +23,12 @@
     align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
+    justify-content: space-between;
 }
 
 .history-detail-div-2 {
     display: flex;
-    width: 472px;
+    width: 100%;
     align-items: center;
     gap: 26px;
     position: relative;
@@ -135,7 +137,7 @@
 .history-detail-div-7 {
     display: flex;
     flex-direction: column;
-    width: 366px;
+    width: 100%;
     align-items: flex-start;
     gap: 15px;
     position: relative;
@@ -149,6 +151,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
 }
 
 .history-detail-vector {
@@ -164,9 +167,12 @@
     color: #000000;
     font-size: 13.3px;
     letter-spacing: 0;
-    line-height: 20.8px;
+    line-height: 18px;
     white-space: nowrap;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 .history-detail-span {
@@ -175,7 +181,7 @@
     color: #000000;
     font-size: 13.3px;
     letter-spacing: 0;
-    line-height: 20.8px;
+    line-height: 18px;
 }
 
 .history-detail-text-wrapper-4 {
@@ -185,29 +191,30 @@
 
 .history-detail-group-wrapper {
     position: relative;
-    width: 305px;
+    width: 100%;
     height: 60.26px;
 }
 
 .history-detail-overlap-group-wrapper {
-    width: 307px;
+    width: 100%;
     height: 60px;
 }
 
 .history-detail-overlap-group {
     position: relative;
-    width: 305px;
+    width: 100%;
     height: 60px;
     background-color: #8976fd99;
     border-radius: 9.27px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .history-detail-text-wrapper-5 {
-    position: absolute;
-    top: 14px;
-    left: 94px;
+    display: flex;
     font-family: "Poppins-Medium", Helvetica;
     font-weight: 500;
     color: #ffffff;
@@ -407,7 +414,7 @@
 
 .history-detail-text-wrapper-11 {
     position: relative;
-    width: 912px;
+    /* width: 912px; */
     height: 36px;
     margin-top: -1.00px;
     font-family: "Poppins-Regular", Helvetica;

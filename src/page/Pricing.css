@@ -1,11 +1,11 @@
 .pricing-frame {
-    display: flex;
     flex-direction: column;
-    width: 1330px;
+    width: 100%;
     align-items: center;
     gap: 35px;
     position: relative;
-    justify-self: center;
+    height: auto;
+    background-color: #f9f9f9;
 }
 
 .pricing-div {
@@ -14,14 +14,14 @@
     align-items: flex-start;
     position: relative;
     align-self: stretch;
-    width: 100%;
     flex: 0 0 auto;
+    justify-self: center;
+
 }
 
 .pricing-text-wrapper {
     position: relative;
     align-self: stretch;
-    height: 81px;
     margin-top: -1.00px;
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
@@ -31,7 +31,7 @@
     line-height: 60px;
 }
 
-.pricing-div-2 {
+/* .pricing-div-2 {
     display: flex;
     align-items: center;
     gap: 61px;
@@ -39,6 +39,30 @@
     align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
+} */
+
+.pricing-div-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 기본적으로 4열 */
+    gap: 20px;
+    /* 요소 간 간격 */
+    width: 100%;
+    justify-items: center;
+}
+
+/* 화면이 작아지면 2열 */
+@media (max-width: 1024px) {
+    .pricing-div-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 더 작아지면 1열 */
+@media (max-width: 768px) {
+    .pricing-div-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .pricing-frame-wrapper {

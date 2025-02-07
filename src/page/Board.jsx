@@ -98,102 +98,103 @@ export function Board() {
 
     }
     return (
-        <div className="board-div">
-            <div className="board-frame-2">
-                <div className="board-frame-3">
-                    <div className="board-large-title">고객문의 게시판</div>
-                    <button className="board-button" onClick={handleWriteButtonClick}>
-                        <img className="board-icon-edit" src="/icon-edit.png" />
-                        <div className="board-text">글 작성</div>
-                    </button>
-                </div>
-                <div className="board-frame-wrapper">
-                    <div className="board-frame-4">
-                        <div>
-                            <div className="board-frame-11" style={{ cursor: 'default' }}>
-                                <div className="board-num"><div className="board-text-wrapper-4">번호</div></div>
-                                <div className="board-category"><div className="board-text-wrapper-5">카테고리</div></div>
-                                <div className="board-title">
-                                    <div className="board-frame-12">
-                                        <p className="board-p">재목</p>
+        <div className="board-container">
+            <div className="board-div">
+                <div className="board-frame-2">
+                    <div className="board-frame-3">
+                        <div className="board-large-title">고객문의 게시판</div>
+                        <button className="board-button" onClick={handleWriteButtonClick}>
+                            <img className="board-icon-edit" src="/icon-edit.png" />
+                            <div className="board-text">글 작성</div>
+                        </button>
+                    </div>
+                    <div className="board-frame-wrapper">
+                        <div className="board-frame-4">
+                            <div>
+                                <div className="board-frame-11" style={{ cursor: 'default' }}>
+                                    <div className="board-num"><div className="board-text-wrapper-4">번호</div></div>
+                                    <div className="board-category"><div className="board-text-wrapper-5">카테고리</div></div>
+                                    <div className="board-title">
+                                        <div className="board-frame-12">
+                                            <p className="board-p">재목</p>
+                                        </div>
                                     </div>
+                                    <div className="board-user"><div className="board-text-wrapper-6">작성자</div></div>
+                                    <div className="board-date"><div className="board-text-wrapper-7">작성일</div></div>
+                                    <div className="board-state-comment"><div className="board-text-wrapper-comment">답변
+                                    </div></div>
                                 </div>
-                                <div className="board-user"><div className="board-text-wrapper-6">작성자</div></div>
-                                <div className="board-date"><div className="board-text-wrapper-7">작성일</div></div>
-                                <div className="board-state-comment"><div className="board-text-wrapper-comment">답변
-                                </div></div>
                             </div>
+                            {boardList.map((board) => (
+                                // <Link to={`/board/${board.id}`} key={board.id} style={{ textDecoration: 'none' }}>
+                                <div className="board-frame-11" key={board.id} onClick={() => handleClick(board)}>
+                                    <div className="board-num"><div className="board-text-wrapper-4">{board.id}</div></div>
+                                    <div className="board-category"><div className="board-text-wrapper-5">{board.category}</div></div>
+                                    <div className="board-title">
+                                        <div className="board-frame-12">
+                                            <p className="board-p">{board.title}</p>
+                                            {board.lock ? <img className="board-img" src="lock.png" /> : ""}
+                                        </div>
+                                    </div>
+                                    <div className="board-user"><div className="board-text-wrapper-6">{board.user}</div></div>
+                                    <div className="board-date"><div className="board-text-wrapper-7">{board.createdDate.substring(0, 10)}</div></div>
+                                    {board.answer ? (<div className="board-state"><div className="board-text-wrapper-8">답변완료</div></div>
+                                    ) : (<div className="board-state-2"><div className="board-text-wrapper-8">답변대기</div></div>
+                                    )}
+                                </div>
+                                // </Link>
+                            ))}
+
                         </div>
-                        {boardList.map((board) => (
-                            // <Link to={`/board/${board.id}`} key={board.id} style={{ textDecoration: 'none' }}>
-                            <div className="board-frame-11" key={board.id} onClick={() => handleClick(board)}>
-                                <div className="board-num"><div className="board-text-wrapper-4">{board.id}</div></div>
-                                <div className="board-category"><div className="board-text-wrapper-5">{board.category}</div></div>
-                                <div className="board-title">
-                                    <div className="board-frame-12">
-                                        <p className="board-p">{board.title}</p>
-                                        {board.lock ? <img className="board-img" src="lock.png" /> : ""}
-                                    </div>
-                                </div>
-                                <div className="board-user"><div className="board-text-wrapper-6">{board.user}</div></div>
-                                <div className="board-date"><div className="board-text-wrapper-7">{board.createdDate.substring(0, 10)}</div></div>
-                                {board.answer ? (<div className="board-state"><div className="board-text-wrapper-8">답변완료</div></div>
-                                ) : (<div className="board-state-2"><div className="board-text-wrapper-8">답변대기</div></div>
-                                )}
-                            </div>
-                            // </Link>
-                        ))}
-
                     </div>
-                    <div className="pagination-container">
-                        <button className="pagination-button prev" onClick={() => navigate(`/board?page=${page - 1}`)} disabled={page === 1}>
-                            <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                            Previous
-                        </button>
-                        {Array.from({ length: totalPages }, (_, i) => (
-                            <button
-                                key={i}
-                                className={`pagination-number ${i === page - 1 ? "active" : ""}`}
-                                onClick={() => { setNumber(i); navigate(`/board?page=${i + 1}`); }}
-                            >
-                                {i + 1}
-                            </button>
-                        ))}
-                        <button className="pagination-button next" onClick={() => navigate(`/board?page=${page + 1}`)} disabled={page === totalPages}>
-                            Next
-                            <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </div>
-
                 </div>
-            </div>
-            <Modal
-                isOpen={modalIsOpen}
-                // onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
-                <button onClick={closeModal} className="modal-close-button">×</button>
-                <div className="modal-title">게시글 타이틀</div>
+                <Modal
+                    isOpen={modalIsOpen}
+                    // onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="Example Modal"
+                >
+                    <button onClick={closeModal} className="modal-close-button">×</button>
+                    <div className="modal-title">게시글 타이틀</div>
 
-                <form onSubmit={handleSubmit} className="modal-form">
-                    <input
-                        type="password"
-                        className="modal-input"
-                        placeholder="비밀번호 입력"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="submit" className="modal-submit-button">
-                        제출
+                    <form onSubmit={handleSubmit} className="modal-form">
+                        <input
+                            type="password"
+                            className="modal-input"
+                            placeholder="비밀번호 입력"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button type="submit" className="modal-submit-button">
+                            제출
+                        </button>
+                    </form>
+                </Modal>
+            </div>
+            <div className="pagination-container">
+                <button className="pagination-button prev" onClick={() => navigate(`/board?page=${page - 1}`)} disabled={page === 1}>
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Previous
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => (
+                    <button
+                        key={i}
+                        className={`pagination-number ${i === page - 1 ? "active" : ""}`}
+                        onClick={() => { setNumber(i); navigate(`/board?page=${i + 1}`); }}
+                    >
+                        {i + 1}
                     </button>
-                </form>
-            </Modal>
+                ))}
+                <button className="pagination-button next" onClick={() => navigate(`/board?page=${page + 1}`)} disabled={page === totalPages}>
+                    Next
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     );
 }

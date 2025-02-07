@@ -1,7 +1,6 @@
 .mp-div {
     background-color: #f8f8f8;
     overflow-x: hidden;
-    width: 1920px;
     height: fit-content;
     position: relative;
     display: flex;

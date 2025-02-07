@@ -47,29 +47,29 @@ import AppRoutes from './router/AppRoutes';
 // }
 
 function App() {
-  useEffect(() => {
-    // 화면 배율 구하기
-    const devicePixelRatio = window.devicePixelRatio;
+  // useEffect(() => {
+  //   // 화면 배율 구하기
+  //   const devicePixelRatio = window.devicePixelRatio;
 
-    // 배율에 따라 scale 값 계산 (예: 125% 배율은 0.8, 100% 배율은 1.0)
-    let scaleValue = 1.0;  // 기본 값 1.0
-    if (devicePixelRatio > 1) {
-      scaleValue = 0.8;  // 배율이 100% 이상일 때 0.8로 축소
-    }
+  //   // 배율에 따라 scale 값 계산 (예: 125% 배율은 0.8, 100% 배율은 1.0)
+  //   let scaleValue = 1.0;  // 기본 값 1.0
+  //   if (devicePixelRatio > 1) {
+  //     scaleValue = 0.8;  // 배율이 100% 이상일 때 0.8로 축소
+  //   }
 
-    // 화면 축소 적용
-    document.body.style.transform = `scale(${scaleValue})`;  // 배율에 맞게 축소
-    document.body.style.transformOrigin = "0 0";  // 축소 기준을 왼쪽 상단으로 설정
+  //   // 화면 축소 적용
+  //   document.body.style.transform = `scale(${scaleValue})`;  // 배율에 맞게 축소
+  //   document.body.style.transformOrigin = "0 0";  // 축소 기준을 왼쪽 상단으로 설정
 
-    // 화면 크기 설정 (1920x1080)
-    document.body.style.width = "1920px";
-    document.body.style.height = "1080px";
-  }, []);
+  //   // 화면 크기 설정 (1920x1080)
+  //   document.body.style.width = "1920px";
+  //   document.body.style.height = "1080px";
+  // }, []);
   return (
     <div className="screen">
       <AuthProvider>
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
           <ToastContainer />
           <AppRoutes />
         </BrowserRouter>

@@ -31,3 +31,15 @@ export const putProfile = (profileDate) => {
         }
     });
 }
+
+export const findMemberEmail = (findEmailData) => {
+    return httpApi.post('/member/email', findEmailData);
+}
+
+export const findMemberExist = (findEmailData) => {
+    return httpApi.post('/member/exist', findEmailData);
+}
+
+export const setNewPassword = (newMemberPassword) => {
+    return httpApi.put('/member/password', newMemberPassword);
+}
