@@ -4,7 +4,9 @@ export function Home() {
     const navigate = useNavigate();
     return (
         <div className="main-frame">
-            <img className="main-element" src="/main.png" />
+            <div className="main-img-frame">
+                <img className="main-element" src="/main.png" />
+            </div>
             <div className="main-group">
                 <img className="main-img" src="/youtube.png" />
                 <div className="main-div">

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getProfile, putPassword, putProfile } from '../api/member.api';
 import { useNavigate } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
@@ -22,117 +22,117 @@ export const MyPage2 = () => {
   // 모달 열기
   const openModal = (board) => {
     setModalIsOpen(true);
-};
+  };
 
-// 모달 닫기
-const closeModal = () => {
+  // 모달 닫기
+  const closeModal = () => {
     setModalIsOpen(false);
-};
-// 비밀번호 유효성 검사 함수
-const checkPasswordStrength = (password) => {
+  };
+  // 비밀번호 유효성 검사 함수
+  const checkPasswordStrength = (password) => {
     const minLengthValid = password.length >= 8; // 최소 8글자 이상
     const specialCharValid = /[^a-zA-Z0-9]/.test(password); // 특수문자 포함 여부
 
     return minLengthValid && specialCharValid;
-};
-const handlePasswpord = (e) => {
-  e.preventDefault();
-  // 폼 유효성 검사 추가 (비밀번호 확인, 동의 체크 등)
-  if (!isPasswordMatch) {
+  };
+  const handlePasswpord = (e) => {
+    e.preventDefault();
+    // 폼 유효성 검사 추가 (비밀번호 확인, 동의 체크 등)
+    if (!isPasswordMatch) {
       toast.error("비밀번호가 일치하지 않습니다.");
       return;
-  }
-  if (!checkPasswordStrength(newPassword)) {
+    }
+    if (!checkPasswordStrength(newPassword)) {
       toast.error("비밀번호는 최소 8글자 이상이어야 하며, 특수문자가 포함되어야 합니다.");
       return;
-  }
+    }
 
-  const passwordDate = {
+    const passwordDate = {
       currentPassword: currentPassword,
       newPassword: newPassword,
       confirmPassword, confirmPassword,
-  }
-  const response = putPassword(passwordDate);
-  response.then((res) => {
+    }
+    const response = putPassword(passwordDate);
+    response.then((res) => {
       if (res.data.status === 200) {
-          toast.success("비밀번호 변경 완료");
-          closeModal();
+        toast.success("비밀번호 변경 완료");
+        closeModal();
       } else {
-          toast.error(res.data.message);
+        toast.error(res.data.message);
       }
-  })
-}
-const handleChange = (e) => {
-  const { name, value } = e.target;
+    })
+  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  setProfile((prevProfile) => ({
+    setProfile((prevProfile) => ({
       ...prevProfile,
       [name]: value
-  }));
-};
-useEffect(() => {
-  const response = getProfile();
-  response.then((res) => {
+    }));
+  };
+  useEffect(() => {
+    const response = getProfile();
+    response.then((res) => {
       if (res.data.status === 200) {
-          console.log(res.data.data);
-          setProfile(res.data.data);
+        console.log(res.data.data);
+        setProfile(res.data.data);
       } else {
-          toast.error("조회 실패");
-          navigate('/');
+        toast.error("조회 실패");
+        navigate('/');
       }
-  });
-}, []);
-useEffect(() => {
-  setIsPasswordMatch(newPassword === confirmPassword);
-}, [newPassword, confirmPassword]);
-// 국가 코드 변경 핸들러
-const handleCountryCodeChange = (e) => {
-  setProfile((prevProfile) => ({
+    });
+  }, []);
+  useEffect(() => {
+    setIsPasswordMatch(newPassword === confirmPassword);
+  }, [newPassword, confirmPassword]);
+  // 국가 코드 변경 핸들러
+  const handleCountryCodeChange = (e) => {
+    setProfile((prevProfile) => ({
       ...prevProfile,
       phone: e.target.value + " " + phoneNumber,  // 새로운 국가 코드 적용
-  }));
-};
+    }));
+  };
 
-// 전화번호 변경 핸들러
-const handlePhoneNumberChange = (e) => {
-  let input = handlePhoneChange(e)
+  // 전화번호 변경 핸들러
+  const handlePhoneNumberChange = (e) => {
+    let input = handlePhoneChange(e)
 
-  setProfile((prevProfile) => ({
+    setProfile((prevProfile) => ({
       ...prevProfile,
       phone: countryCode + " " + input,  // 새로운 전화번호 적용
-  }));
-};
-const handlePhoneChange = (e) => {
-  e.preventDefault();
-  // 입력된 값을 가져옴
-  let input = e.target.value;
+    }));
+  };
+  const handlePhoneChange = (e) => {
+    e.preventDefault();
+    // 입력된 값을 가져옴
+    let input = e.target.value;
 
-  // 숫자만 남기고 모두 제거
-  input = input.replace(/[^\d]/g, '');
+    // 숫자만 남기고 모두 제거
+    input = input.replace(/[^\d]/g, '');
 
-  // 전화번호 포맷: 000-0000-0000
-  if (input.length <= 3) {
+    // 전화번호 포맷: 000-0000-0000
+    if (input.length <= 3) {
       input = input.replace(/(\d{0,3})/, '$1');
-  } else if (input.length <= 7) {
+    } else if (input.length <= 7) {
       input = input.replace(/(\d{3})(\d{0,4})/, '$1-$2');
-  } else {
+    } else {
       input = input.replace(/(\d{3})(\d{4})(\d{0,4})/, '$1-$2-$3');
-  }
-  return input;
-};
-const handleProfileChange = (e) => {
-  e.preventDefault();
-  const response = putProfile(profile);
-  response.then((res) => {
+    }
+    return input;
+  };
+  const handleProfileChange = (e) => {
+    e.preventDefault();
+    const response = putProfile(profile);
+    response.then((res) => {
       if (res.data.status === 200) {
-          toast.success("프로필 수정 완료")
+        toast.success("프로필 수정 완료")
       } else {
-          toast.error(res.data.message);
+        toast.error(res.data.message);
       }
-  })
-}
-const customStyles = {
-  content: {
+    })
+  }
+  const customStyles = {
+    content: {
       top: '50%',
       left: '50%',
       right: 'auto',
@@ -143,8 +143,8 @@ const customStyles = {
       padding: '20px',
       width: '400px',
       boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-  },
-};
+    },
+  };
 
   const siteInfo = {
     siteName: '사용자 지정 그룹명명',
@@ -194,9 +194,9 @@ const customStyles = {
           </h1>
 
           {/* 내 정보 수정 부분 */}
-          {activeMenu === 'profile'&& (
+          {activeMenu === 'profile' && (
             <div>내 정보 수정</div>
-            
+
           )}
 
           {/* 사용량 분석 부분 */}
@@ -269,7 +269,7 @@ const ChartCard = ({ dailyData }) => (
         </LineChart>
       </div>
     </div>
-  </div>
+  </div >
 );
 
 // InfoRow 컴포넌트

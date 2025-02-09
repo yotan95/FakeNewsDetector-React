@@ -4,3 +4,10 @@
   height: 100vh;
   background-color: #f9f9f9;
 }
+
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}

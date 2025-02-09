@@ -4,7 +4,7 @@
     height: fit-content;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.login-1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
     min-width: 450px;
 
@@ -90,7 +90,14 @@
     position: relative;
     background-color: #f9f9f9;
     align-items: center;
+    grid-template-columns: (2, 1fr);
 }
+
+/* @media (max-width: 1024px) {
+    .login-img-frame {
+        display: none;
+    }
+} */
 
 .login-group-2 {}
 
@@ -139,7 +146,7 @@
 }
 
 .login-img-frame {
-    width: 50%;
+    /* width: 50%; */
 }
 
 .login-img {

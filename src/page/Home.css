@@ -1,17 +1,27 @@
 .main-frame {
-    align-items: flex-end;
+    /* align-items: flex-end; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position: relative;
-    width: 90%;
+    width: 100%;
+    /* justify-self: center; */
+    gap: 50px;
+    align-items: center;
     justify-self: center;
-    gap: 20px;
+    justify-content: center;
+
 }
 
-.main-element {
+.main-img-frame {
     position: relative;
     width: 50%;
     height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.main-element {
+    width: 70%;
 }
 
 .main-group {
