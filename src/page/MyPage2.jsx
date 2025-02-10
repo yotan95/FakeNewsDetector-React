@@ -176,7 +176,7 @@ export const MyPage2 = () => {
     { time: '03', normal: 0, spam: 26 },
     { time: '06', normal: 1, spam: 36 },
     { time: '09', normal: 7, spam: 43 },
-    { time: '12', normal: 1, spam: 47 }
+    { time: '23', normal: 1, spam: 47 }
   ];
 
 
@@ -203,7 +203,7 @@ export const MyPage2 = () => {
       <div className="main-content">
         <div className="dashboard">
           <h1 className="page-title">
-            {activeMenu === 'profile' ?  '내 정보 수정': '사용량 분석'}
+            {activeMenu === 'profile' ? '내 정보 수정' : '사용량 분석'}
           </h1>
 
           {/* 내 정보 수정 부분 */}

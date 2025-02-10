@@ -68,8 +68,8 @@
     all: unset;
     box-sizing: border-box;
     position: relative;
-    width: 197px;
-    height: 59px;
+    width: 30%;
+    height: 20%;
     background-color: #8976fd;
     border-radius: 15px;
     display: flex;
@@ -83,7 +83,7 @@
     font-family: "NanumGothic-ExtraBold", Helvetica;
     font-weight: 800;
     color: #f9f9f9;
-    font-size: 25px;
+    font-size: 30%;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
