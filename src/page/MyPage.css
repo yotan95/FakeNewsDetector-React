@@ -5,7 +5,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-
+    width: 80%;
+    height: 100%;
 }
 
 .mp-rectangle {
@@ -21,7 +22,7 @@
     flex-direction: column;
     width: 1034px;
     align-items: center;
-    gap: 74px;
+    gap: 5%;
     margin: 50px;
     /* margin-top: 100px; */
     left: 427px;
@@ -51,8 +52,8 @@
 
 .mp-profile-wrapper {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
     align-items: center;
     gap: 10px;
     padding: 14px 17px;
@@ -63,10 +64,9 @@
 }
 
 .mp-profile {
-    position: relative;
-    display: flex;
-    width: 66px;
-    height: 66px;
+    width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
+    height: 100%; /* 부모 컨테이너의 높이에 맞춤 */
+    object-fit: cover; /* 이미지가 컨테이너를 채우도록 조정 (잘릴 수 있음) */
 }
 
 .mp-frame-4 {
@@ -83,9 +83,9 @@
     align-self: stretch;
     margin-top: -1.00px;
     font-family: "Poppins-Medium", Helvetica;
-    font-weight: 500;
+    font-weight: bold;
     color: #000000;
-    font-size: 20px;
+    font-size: 90%;
     letter-spacing: 0;
     line-height: normal;
 }
@@ -97,7 +97,7 @@
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 16px;
+    font-size: 90%;
     letter-spacing: 0;
     line-height: normal;
 }
@@ -297,7 +297,7 @@
 
 .mp-form-group label {
     font-family: "Nanum Gothic", Helvetica;
-    font-size: 14px;
+    font-size: 2%;
     font-weight: 700;
     color: #332c5c;
 }

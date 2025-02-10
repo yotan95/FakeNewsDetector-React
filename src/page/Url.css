@@ -126,27 +126,27 @@
 .url-bg-parent {}
 
 .url-headline1 {
-    font-size: 60px;
+    font-size: 200%;
     line-height: 120%;
     display: inline-block;
 }
 
 @media (max-width: 1600px) {
     .url-headline1 {
-        font-size: 50px;
+        font-size: 200%;
     }
 }
 
 @media (max-width: 1300px) {
     .url-headline1 {
-        font-size: 40px;
+        font-size: 200%;
     }
 }
 
 /* 태블릿 (1024px 이하) */
 @media (max-width: 1024px) {
     .url-headline1 {
-        font-size: 35px;
+        font-size: 200%;
     }
 }
 
@@ -197,7 +197,11 @@
 }
 
 .url-img-frame {
-    width: 100%;
+position: relative;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .url-img {

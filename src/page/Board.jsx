@@ -116,7 +116,7 @@ export function Board() {
                                     <div className="board-category"><div className="board-text-wrapper-5">카테고리</div></div>
                                     <div className="board-title">
                                         <div className="board-frame-12">
-                                            <p className="board-p">재목</p>
+                                            <p className="board-p">제목</p>
                                         </div>
                                     </div>
                                     <div className="board-user"><div className="board-text-wrapper-6">작성자</div></div>

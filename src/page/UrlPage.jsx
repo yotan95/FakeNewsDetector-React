@@ -80,7 +80,7 @@ export function UrlPage() {
                     <img className="url-img" src="/main.png" />
                 </div>
                 <div className="url-headline-parent">
-                    <b className="url-headline1">가짜 뉴스 확인을 위해 신뢰할 수 있는 AI 알고리즘과 공신력 있는 뉴스 데이터를 활용합니다.</b>
+                    <b className="url-headline1">가짜 뉴스 확인을 위해 신뢰할 수 있는<br></br>AI 알고리즘과 공신력 있는 뉴스 데이터를 활용합니다.</b>
                     <div className="url-email-text-input">
                         <input className="url-text-input" placeholder="URL을 입력해주세요." value={url} onChange={(e) => setUrl(e.target.value)} />
                         <div className="url-cta" onClick={handleSubmit}>
