@@ -197,7 +197,7 @@
 }
 
 .url-img-frame {
-position: relative;
+    position: relative;
     width: 80%;
     height: auto;
     display: flex;
