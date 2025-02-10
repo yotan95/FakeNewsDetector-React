@@ -1,6 +1,6 @@
 .signup-signup-container {
     background: white;
-    padding: 40px;
+    padding: 2%;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.signup-1);
     z-index: 1;
@@ -19,7 +19,7 @@
 
 .signup-signup-title {
     font-family: "Nanum Gothic", Helvetica;
-    font-size: 24px;
+    font-size: 100%;
     font-weight: 700;
     color: #332c5c;
     text-align: center;
