@@ -22,7 +22,7 @@ export function Header() {
                     </Link>
                     {isAuthenticated && (
                         <Link to="/board" style={{ textDecoration: 'none' }}>
-                            <b className="b">게시판</b>
+                            <b className="b">고객센터</b>
                         </Link>
                     )}
                     {(isAuthenticated && member.role === "ROLE_USER") && (
