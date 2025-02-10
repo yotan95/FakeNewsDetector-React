@@ -313,11 +313,12 @@
 
 .history-detail-group-4 {
     position: relative;
-    width: 192px;
-    height: 26.16px;
+    width: 33%;
+    /* height: 26.16px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .history-detail-line-2 {
