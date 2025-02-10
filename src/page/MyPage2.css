@@ -29,7 +29,7 @@
 }
 
 .menu-item.active {
-    background-color: #4F46E5;
+    background-color: #7562e0;
     color: white;
 }
 
@@ -89,6 +89,28 @@
 .card-title {
     font-size: 80%;
     margin-bottom: 2%;
+}
+
+.card-title-wrapper {
+    display: flex;
+    gap: 83%;
+}
+
+.card-button {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    color: #374151;
+}
+.card-button:hover {
+    background-color: #e5e7eb;
+}
+
+.card-button.active {
+    background-color: #7562e0;
+    color: white;
 }
 
 .main-content.dashboard {

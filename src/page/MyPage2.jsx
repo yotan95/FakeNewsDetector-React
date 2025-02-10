@@ -77,7 +77,7 @@ export const MyPage2 = () => {
         console.log(res.data.data);
         setProfile(res.data.data);
       } else {
-        toast.error("조회 실패");
+        toast.error("잠시후 다시 시도해주세요.");
         navigate('/');
       }
     });
@@ -125,7 +125,7 @@ export const MyPage2 = () => {
     const response = putProfile(profile);
     response.then((res) => {
       if (res.data.status === 200) {
-        toast.success("프로필 수정 완료")
+        toast.success("프로필 수정 완료.")
       } else {
         toast.error(res.data.message);
       }
@@ -203,7 +203,7 @@ export const MyPage2 = () => {
       <div className="main-content">
         <div className="dashboard">
           <h1 className="page-title">
-            {activeMenu === 'profile' ?  '사용량 분석': '내 정보 수정'}
+            {activeMenu === 'profile' ? '사용량 분석' : '내 정보 수정'}
           </h1>
 
           {/* 내 정보 수정 부분 */}
@@ -323,16 +323,19 @@ export const MyPage2 = () => {
 // InfoCard 컴포넌트
 const InfoCard = ({ siteInfo }) => (
   <div className="info-card">
-    <h2 className="card-title">기본 정보</h2>
+    <div className='card-title-wrapper'>
+      <h2 className="card-title">기본 정보</h2>
+      <button onClick={() => toast.error('잠시후 다시 시도해주세요.')} className='menu-item active'>그룹 초대</button>
+    </div>
     <div className="info-grid">
       <div className="info-column">
         <InfoRow label="그룹 명" value={siteInfo.siteName} />
         <InfoRow label="사이트 URL" value={siteInfo.siteUrl} />
-        <InfoRow label="총 페이지수" value={siteInfo.totalPages} />
+        <InfoRow label="총 멤버 수" value={siteInfo.totalPages} />
       </div>
       <div className="info-column">
         <InfoRow label="등록일자" value={siteInfo.registeredDate} />
-        <InfoRow label="그룹 아이디" value={siteInfo.siteId} />
+        <InfoRow label="초대 가능한 아이디 수 " value={siteInfo.siteId} />
         <InfoRow label="활성된 아이디" value={siteInfo.activatedPages} />
       </div>
     </div>

@@ -16,7 +16,7 @@ export function UrlPage() {
 
     const handleSubmit = async () => {
         if (member === null) {
-            toast.error('로그인 필요');
+            toast.error('로그인을 해주세요.');
             navigation('/login');
             return
         }

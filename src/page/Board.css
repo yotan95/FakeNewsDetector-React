@@ -55,7 +55,7 @@
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #7562e0;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 27px;
     white-space: nowrap;
@@ -99,7 +99,7 @@
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #7562e0;
-    font-size: 18px;
+    font-size: 80%;
     text-align: center;
     letter-spacing: 0;
     line-height: 27px;
@@ -113,7 +113,7 @@
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #7562e0;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 27px;
     white-space: nowrap;
@@ -148,7 +148,7 @@
     font-family: "NanumGothic-ExtraBold", Helvetica;
     font-weight: 800;
     color: #242630;
-    font-size: 40px;
+    font-size: 200%;
     letter-spacing: 0;
     line-height: 36px;
     white-space: nowrap;
@@ -223,7 +223,7 @@
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     text-align: center;
     letter-spacing: 0;
     line-height: 20px;
@@ -247,7 +247,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -268,7 +268,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -295,7 +295,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -321,7 +321,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -359,7 +359,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #6b53ff;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -371,7 +371,7 @@
     margin-top: -1.00px;
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -386,7 +386,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     white-space: nowrap;
@@ -449,7 +449,7 @@
     font-family: "NanumGothic-Regular", Helvetica;
     font-weight: 400;
     color: #000000;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 20px;
     display: flex;
@@ -484,7 +484,7 @@
     font-family: "NanumGothic-Bold", Helvetica;
     font-weight: 700;
     color: #7562e0;
-    font-size: 18px;
+    font-size: 80%;
     letter-spacing: 0;
     line-height: 27px;
     white-space: nowrap;
