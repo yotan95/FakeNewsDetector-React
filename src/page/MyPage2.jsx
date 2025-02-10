@@ -180,7 +180,7 @@ export const MyPage2 = () => {
   ];
 
 
-  
+
   return (
     <div className="page-container">
       {/* 사이드바 */}
@@ -203,14 +203,14 @@ export const MyPage2 = () => {
       <div className="main-content">
         <div className="dashboard">
           <h1 className="page-title">
-            {activeMenu === 'profile' ?  '사용량 분석': '내 정보 수정'}
+            {activeMenu === 'profile' ? '사용량 분석' : '내 정보 수정'}
           </h1>
 
           {/* 내 정보 수정 부분 */}
           {activeMenu === 'usage' && (
             <div className='main-wrapper'>
               <div className="mp-div">
-                <img className="mp-rectangle" src="img/rectangle-6700.svg" width={20} height={20}/>
+                <img className="mp-rectangle" src="img/rectangle-6700.svg" width={20} height={20} />
                 <form className="mp-frame" onSubmit={(e) => handleProfileChange(e)}>
                   <div className="mp-frame-2">
                     <div className="mp-frame-3">
@@ -310,7 +310,7 @@ export const MyPage2 = () => {
               <>
                 <InfoCard siteInfo={siteInfo} />
                 <ChartCard dailyData={dailyData} monthlyData={monthlyData} />
-                
+
               </>
             </div>
           )}
@@ -345,8 +345,8 @@ const ChartCard = ({ dailyData, monthlyData }) => (
     <h2 className="card-title">사용량 통계</h2>
     <div className="chart-container">
       <div className='subtitle-container'>
-      <h3 className="chart-subtitle">최근 24시간</h3>
-      <h3 className='chart-subtitle subtitle-leftpadding'>최근 1달간</h3>
+        <h3 className="chart-subtitle">최근 24시간</h3>
+        <h3 className='chart-subtitle subtitle-leftpadding'>최근 1달간</h3>
       </div>
       <div className="chart-wrapper">
         <LineChart
@@ -354,7 +354,7 @@ const ChartCard = ({ dailyData, monthlyData }) => (
           width={500}
           height={180}
           data={dailyData}
-          // margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        // margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="time" />
@@ -379,7 +379,7 @@ const ChartCard = ({ dailyData, monthlyData }) => (
         </LineChart>
       </div>
     </div>
-  </div>
+  </div >
 );
 
 // InfoRow 컴포넌트

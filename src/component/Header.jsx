@@ -20,9 +20,11 @@ export function Header() {
                     <Link to="/pricing" style={{ textDecoration: 'none' }}>
                         <b className="b">요금안내</b>
                     </Link>
-                    <Link to="/board" style={{ textDecoration: 'none' }}>
-                        <b className="b">게시판</b>
-                    </Link>
+                    {isAuthenticated && (
+                        <Link to="/board" style={{ textDecoration: 'none' }}>
+                            <b className="b">고객센터</b>
+                        </Link>
+                    )}
                     {(isAuthenticated && member.role === "ROLE_USER") && (
                         <Link to="/history" style={{ textDecoration: 'none' }}>
                             <b className="b">탐지 내역</b>
@@ -31,6 +33,11 @@ export function Header() {
                     {isAuthenticated ? (
                         <div className="groupWrapper">
                             <div className="loginsignupParent">
+                                {member.role === "ROLE_USER" && (
+                                    <Link to="/mypage2" style={{ textDecoration: 'none' }}>
+                                        <b className="b2">마이 페이지</b>
+                                    </Link>
+                                )}
                                 <Link to="/" onClick={handleLogout} style={{ textDecoration: 'none' }}>
                                     <div className="loginsignup">
                                         <div className="wrapper">
@@ -38,25 +45,20 @@ export function Header() {
                                         </div>
                                     </div>
                                 </Link>
-                                {member.role === "ROLE_USER" && (
-                                    <Link to="/mypage2" style={{ textDecoration: 'none' }}>
-                                        <b className="b2">마이 페이지</b>
-                                    </Link>
-                                )}
                             </div>
                         </div>
                     ) : (
                         <div className="groupWrapper">
                             <div className="loginsignupParent">
+                                <Link to="/login" style={{ textDecoration: 'none' }}>
+                                    <b className="b2">로그인</b>
+                                </Link>
                                 <Link to="/signup" style={{ textDecoration: 'none' }}>
                                     <div className="loginsignup">
                                         <div className="wrapper">
                                             <b className="b1">회원가입</b>
                                         </div>
                                     </div>
-                                </Link>
-                                <Link to="/login" style={{ textDecoration: 'none' }}>
-                                    <b className="b2">로그인</b>
                                 </Link>
                             </div>
                         </div>

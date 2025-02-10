@@ -1,16 +1,20 @@
 .board-div {
     background-color: #f9f9f9;
     width: 100%;
-    height: auto;
+    height: 90%;
     position: relative;
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 
 .board-container {
     width: 100%;
-    height: auto;
+    flex: 1;
+    position: relative;
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 
@@ -488,6 +492,7 @@
 
 .pagination-container {
     display: flex;
+    /* position: absolute; */
     align-items: center;
     justify-self: center;
     justify-content: center;
@@ -495,6 +500,8 @@
     gap: 5px;
     margin-top: 17%;
     padding-bottom: 40px;
+    height: 10%;
+    /* bottom: 100px; */
     /* align-self: center; */
 }
 

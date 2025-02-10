@@ -26,7 +26,7 @@ export function Login() {
                 const token = res.headers.get('Authorization');
                 login(token, res.data.data);
                 toast.success(res.data.message);
-                navigate('/');
+                navigate('/url');
             } else {
                 toast.error(res.data.message);
             }
