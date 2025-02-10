@@ -62,19 +62,22 @@ export const BoardDetail = () => {
     }, []);
 
     const handleDownload = async () => {
-        const response = await fetch(`http://localhost:8080/download?file=${boardDetail.imageUrl}`);
+        // 이미지 다운로드 API 호출
+        const response = await downloadImage(boardDetail.imageUrl);
 
-        // 이미 Blob 객체이므로 변환할 필요 없음
-        const downloadUrl = window.URL.createObjectURL(response.data);
+        // Blob 데이터를 URL로 변환
+        const blobUrl = window.URL.createObjectURL(new Blob([response.data]));
 
-        const link = document.createElement('a');
-        link.href = downloadUrl;
-        link.setAttribute('download', boardDetail.imageUrl);
-        document.body.appendChild(link);
-        link.click();
+        // 다운로드 링크 생성
+        const a = document.createElement("a");
+        a.href = blobUrl;
+        a.download = boardDetail.imageUrl.split("/").pop(); // 파일명 추출
+        document.body.appendChild(a);
+        a.click();
 
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(downloadUrl);
+        // 사용한 요소 정리
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(blobUrl);
     }
     const handleComment = () => {
         let commentData = {
