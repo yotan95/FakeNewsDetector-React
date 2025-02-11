@@ -1,0 +1,91 @@
+.about-main {
+    width: 100%;
+    height: 100vh;
+}
+
+.about-main-img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.about-main-frame {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    left: 50%;
+    flex-direction: column;
+    transform: translateX(-50%);
+}
+
+.about-main-frame-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-main-button {
+    background-color: #8976fd;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 5px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    border-style: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.about-content-container {
+    /* margin-top: 100vh; */
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-content-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-main-back-button {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+    font-weight: 700;
+    background-color: #8976fd;
+    border-radius: 50px;
+    padding: 5px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    border-style: none;
+    align-items: center;
+    /* 부드럽게 변하도록 */
+}
+
+.backIcon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.about-main-back-button:hover {
+    transform: scale(1.2);
+}
