@@ -87,7 +87,7 @@
 
 /* 카드 제목 */
 .card-title {
-    font-size: 80%;
+    font-size: 100%;
     margin-bottom: 2%;
 }
 
@@ -133,18 +133,18 @@
 }
 
 .info-label {
-    font-size: 50%;
+    font-size: 100%;
     color: #666;
 }
 
 .info-value {
-    font-size: 30%;
+    font-size: 90%;
     font-weight: bold;
 }
 
 /* 차트 관련 스타일 */
 .chart-subtitle {
-    font-size: 50%;
+    font-size: 100%;
     margin-bottom: 3%;
 }
 

@@ -17,15 +17,15 @@ export const HistoryComponent = ({ history, onClick, isActive }) => {
                         <div className="history-comp-div-3">
                             <div className="history-comp-div-4">
                                 <img className="history-comp-img" src="/done.png" />
-                                <div className="history-comp-text-wrapper-2">fakeNewsRate : {history.fakeNewsRate}%</div>
+                                <div className="history-comp-text-wrapper-2">가짜 뉴스 확률 : {history.fakeNewsRate}%</div>
                             </div>
                             <div className="history-comp-div-4">
                                 <img className="history-comp-img" src="/done.png" />
-                                <div className="history-comp-text-wrapper-3">deepVoiceRate : {history.deepVoiceRate}%</div>
+                                <div className="history-comp-text-wrapper-3">딥 보이스 확률 : {history.deepVoiceRate}%</div>
                             </div>
                             <div className="history-comp-div-5">
                                 <img className="history-comp-img" src="/done.png" />
-                                <div className="history-comp-text-wrapper-4">deepFakeRate : {history.deepFakeRate}%</div>
+                                <div className="history-comp-text-wrapper-4">딥 페이크 확률률 : {history.deepFakeRate}%</div>
                             </div>
                         </div>
                     </div>
