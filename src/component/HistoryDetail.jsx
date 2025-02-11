@@ -1,6 +1,6 @@
 import "./HistoryDetail.css";
 import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
- 
+
 export const HistoryDetail = ({ history }) => {
     return (
         <div className="history-detail-frame">
@@ -53,7 +53,7 @@ export const HistoryDetail = ({ history }) => {
                                 [`& .${gaugeClasses.valueText}`]: {
                                     fontWeight: 600
                                 },
-                            }}/>
+                            }} />
                             <p className="historey-detail-text-wrapper-8">가짜뉴스 확률</p>
                         </div>
                         <div className="history-detail-group-4">
@@ -65,7 +65,7 @@ export const HistoryDetail = ({ history }) => {
                                 [`& .${gaugeClasses.valueText}`]: {
                                     fontWeight: 600
                                 },
-                            }}/>
+                            }} />
                             <p className="historey-detail-text-wrapper-8">딥보이스 확률</p>
                         </div>
                         <div className="history-detail-group-4">
@@ -77,7 +77,7 @@ export const HistoryDetail = ({ history }) => {
                                 [`& .${gaugeClasses.valueText}`]: {
                                     fontWeight: 600
                                 },
-                            }}/>
+                            }} />
                             <p className="historey-detail-text-wrapper-8">딥페이크 확률</p>
                         </div>
                     </div>

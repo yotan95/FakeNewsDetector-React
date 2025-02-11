@@ -17,16 +17,15 @@ export const History = () => {
     const [totalPages, setTotalPaqges] = useState();
     const navigate = useNavigate();
     const [number, setNumber] = useState(page);
-
     useEffect(() => {
         // historyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         if (selectedHistory && historyRef.current) {
-
             const selectedElement = historyRef.current.querySelector(`[data-title="${selectedHistory.id}"]`);
             console.log(selectedElement);
             if (selectedElement) {
                 console.log(selectedElement);
                 selectedElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.scroll(0, 0);
             }
         }
     }, [selectedHistory]);
@@ -36,6 +35,15 @@ export const History = () => {
             setSelectedHistory(null);
             setIsColumn(false);
         } else {
+            // 추가 history배열 순서 변경
+            const currentHistory = [...history]
+            const index = currentHistory.findIndex(item => item.id === hist.id);
+            const reorderHistory = [
+                ...history.slice(index),
+                ...history.slice(0, index)
+            ];
+            // 
+            setHistory(reorderHistory);
             setSelectedHistory(hist);
             setIsColumn(true);
         }

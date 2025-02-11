@@ -14,6 +14,7 @@ import { useRoutes } from 'react-router-dom';
 import { MainLayout } from "../page/MainLayout";
 import { Header } from "../component/Header";
 import { MyPage } from '../page/MyPage'
+import { About } from "../page/About";
 const AppRoutes = () => {
     const routes = useRoutes([
         {
@@ -37,9 +38,8 @@ const AppRoutes = () => {
                     ],
                 },
             ],
-
         },
-
+        { path: "/about", element: <About /> }
         // { path: "/", element: <Home /> },
         // { path: "/login", element: <Login /> },
         // { path: "/signup", element: <Signup /> },
