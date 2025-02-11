@@ -324,7 +324,7 @@ export const MyPage2 = () => {
 const InfoCard = ({ siteInfo }) => (
   <div className="info-card">
     <div className='card-title-wrapper'>
-      <h2 className="card-title">기본 정보</h2>
+      <h2 className="card-title">그룹 정보</h2>
       <button onClick={() => toast.error('잠시후 다시 시도해주세요.')} className='menu-item active'>그룹 초대</button>
     </div>
     <div className="info-grid">

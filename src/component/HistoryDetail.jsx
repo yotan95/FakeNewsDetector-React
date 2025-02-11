@@ -1,5 +1,5 @@
 import "./HistoryDetail.css";
-import { Gauge } from '@mui/x-charts/Gauge';
+import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
 
 export const HistoryDetail = ({ history }) => {
     return (
@@ -48,25 +48,19 @@ export const HistoryDetail = ({ history }) => {
                             {/* <img className="history-detail-line-2" src="/line-49.png" /> */}
                             {/* <p className="history-detail-div-11">
                                 <span className="history-detail-text-wrapper-8">fakeNewsRate</span> <span className="history-detail-text-wrapper-9">: {history.fakeNewsRate}%</span>
-                            </p> */}
-                            <Gauge width={100} height={100} value={history.fakeNewsRate} valueMin={0} valueMax={100} />
-                            <p className="historey-detail-text-wrapper-8">가짜뉴스 확률</p>
+                            </p>
                         </div>
                         <div className="history-detail-group-4">
                             {/* <img className="history-detail-line-2" src="/line-49.png" />
                             <p className="history-detail-div-11">
                                 <span className="history-detail-text-wrapper-8">deepVoiceRate</span> <span className="history-detail-text-wrapper-9">: {history.deepVoiceRate}%</span>
-                            </p> */}
-                            <Gauge width={100} height={100} value={history.deepVoiceRate} valueMin={0} valueMax={100} />
-                            <p className="historey-detail-text-wrapper-8">딥보이스 확률</p>
+                            </p>
                         </div>
                         <div className="history-detail-group-4">
                             {/* <img className="history-detail-line-2" src="/line-49.png" />
                             <p className="history-detail-div-11">
                                 <span className="history-detail-text-wrapper-8">deepFakeRate</span> <span className="history-detail-text-wrapper-9">: {history.deepFakeRate}%</span>
-                            </p> */}
-                            <Gauge width={100} height={100} value={history.deepFakeRate} valueMin={0} valueMax={100} />
-                            <p className="historey-detail-text-wrapper-8">딥페이크 확률</p>
+                            </p>
                         </div>
                     </div>
                     <div className="history-detail-group-5">
