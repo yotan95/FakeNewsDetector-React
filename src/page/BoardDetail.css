@@ -247,7 +247,6 @@
     color: #000000;
     font-size: 16px;
     letter-spacing: 0.10px;
-    white-space: normal;
     /* 기본적으로 줄 바꿈을 허용 */
     word-wrap: break-word;
     /* 긴 단어가 자동으로 줄 바꿈 */
@@ -255,6 +254,7 @@
     /* 줄 간격을 넓게 설정 */
     overflow: visible;
     /* 넘치는 텍스트가 보이도록 설정 */
+    white-space: pre-line;
 }
 
 .bd-span {
