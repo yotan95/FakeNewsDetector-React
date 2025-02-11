@@ -65,8 +65,8 @@ export function UrlPage() {
         const hours = parseInt((match[1] || "0H").replace("H", ""), 10) || 0;
         const minutes = parseInt((match[2] || "0M").replace("M", ""), 10) || 0;
         const seconds = parseInt((match[3] || "0S").replace("S", ""), 10) || 0;
-
-        return Math.floor((hours * 3600 + minutes * 60 + seconds) / 2);
+        return 60
+        // return Math.floor((hours * 3600 + minutes * 60 + seconds) / 2);
     };
 
     const extractYouTubeID = (url) => {
