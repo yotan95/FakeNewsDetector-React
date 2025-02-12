@@ -19,9 +19,9 @@ export function AboutMain() {
             {/* </div> */}
             <div className='about-main-frame'>
                 <div className='about-main-frame-1'>
-                    <h1>text1</h1>
+                    {/* <h1>text1</h1>
                     <img src='/aalogo.png' />
-                    <h1>text2</h1>
+                    <h1>text2</h1> */}
                 </div>
                 {/* <div>
                     <button className='about-main-button'>Home</button>
