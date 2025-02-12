@@ -32,8 +32,14 @@ httpApi.interceptors.request.use(
 httpApi.interceptors.response.use(
     (response) => response,
     (error) => {
-        if (error.response && error.respone.status === 401) {
+        console.log(error);
+        if (error.response && error.response.status === 401) {  // 수정된 부분
             localStorage.removeItem("token");
+            localStorage.removeItem("member");
+            window.location.href = "/login";
+        } else if (error.code === 'ERR_NETWORK') {
+            localStorage.removeItem("token");
+            localStorage.removeItem("member");
             window.location.href = "/login";
         }
         return Promise.reject(error);
