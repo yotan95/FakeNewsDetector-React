@@ -13,7 +13,7 @@ export function Header() {
     return (
         (
             <div className="parent">
-                <Link to="/" style={{ textDecoration: 'none' }}>
+                <Link to="/url" style={{ textDecoration: 'none' }}>
                     <img className="icon" alt="" src="/logo.png" />
                 </Link>
                 <div className="group">
